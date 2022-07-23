@@ -12,19 +12,19 @@ Back in 2012 I have discovered a small social network. Now, after 10 years and o
 
 > "Share what you're reading. Not what you like. Not what you find interesting. Just what you're reading."
 
-{% figure "homepage.png" %}
+{% figure "homepage.png", alt="Screenshot of the Reading homepage with a list of posted links and title Some people are reading this stuff." %}
 Reading homepage.
 {% endfigure %}
 
 Whenever I read something on the web, I used a bookmarklet (or extension, or email) to post the link to Reading.
 
-{% figure "overlay.png", 'A screenshot of a web page with Reading\'s overlay  with "yep", "nope", and "share" buttons' %}
+{% figure "overlay.png", alt='A screenshot of a web page with Reading\'s overlay with "yep", "nope", and "share" buttons' %}
 Reading overlay on the page.
 {% endfigure %}
 
 When I liked the article, I hit “Yep”. When I hated it, I hit “Nope”. I could also comment on the page or quote the text on the page. The quoting functionality was particularly subtle: if any text in quotes was found on the page, it was highlighted by the extension.
 
-{% figure "overlay-comment.png", "Reading overlay highlighting a quoted text in the comment" %}{% endfigure %}
+{% figure "overlay-comment.png", "Screenshot of a Reading overlay highlighting a quoted text in the comment" %}{% endfigure %}
 
 Occasionally, I checked links posted by others. All in a simple chronological feed with no ads, no algorithmic recommendations, and no distracting images.
 
