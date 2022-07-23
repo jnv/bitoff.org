@@ -16,9 +16,8 @@
     <main>
       {{ content | safe }}
     </main>
-    <footer
-      class="site-footer">
-      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+    <footer class="site-footer">
+      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ -#}
       <nav class="site-nav">
         {%- for entry in collections.all | eleventyNavigation %}
           {% if entry.url != page.url %}
