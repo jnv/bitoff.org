@@ -1,0 +1,21 @@
+{
+  "title": "jnv.zone",
+  "url": "https://www.jnv.zone/",
+  "language": "en",
+  "description": "An occassional weblog.",
+  "feed": {
+    "subtitle": "An occassional weblog.",
+    "filename": "feed.xml",
+    "path": "/feed.xml",
+    "id": "tag:jnv.zone,2022-07-14:website"
+  },
+  "jsonfeed": {
+    "path": "/feed.json",
+    "url": "https://www.jnv.zone/feed/feed.json"
+  },
+  "author": {
+    "name": "Jan Vlnas",
+    "email": "hello@jnv.zone",
+    "url": "https://jan.vlnas.cz"
+  }
+}

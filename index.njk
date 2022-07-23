@@ -1,0 +1,26 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: "jnv.zone"
+  order: 1
+---
+
+<p class="home-intro">
+  <strong>jnv.zone</strong>
+  is an occassional weblog written by
+  <a href="https://jan.vlnas.cz">Jan Vlnas</a>.
+</p>
+<ul class="postlist">
+  {% for post in collections.posts | reverse %}
+    <li class="postlist-item">
+      <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | shortDate }}</time>
+      <a href="{{ post.url | url }}" class="postlist-link">
+        {% if post.data.title %}
+          {{ post.data.title }}
+        {% else %}
+          <code>{{ post.url }}</code>
+        {% endif %}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

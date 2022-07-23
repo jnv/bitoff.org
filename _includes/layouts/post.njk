@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-post
+---
+
+<header class="post-header">
+  <h1 class="post-title">{{ title }}</h1>
+  <p class="post-published">
+    Published on <time datetime="{{ page.date | htmlDateString }}">{{
+    page.date | readableDate
+  }}</time>
+  </p>
+</header>
+
+{{ content | safe }}
