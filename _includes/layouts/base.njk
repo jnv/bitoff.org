@@ -7,16 +7,19 @@
     <meta name="description" content="{{ description or metadata.description }}">
     <meta name="generator" content="{{ eleventy.generator }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/prism-diff.css' | url }}">
+    {% if syntaxHighlighting -%}
+      <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
+      <link rel="stylesheet" href="{{ '/css/prism-diff.css' | url }}">
+    {%- endif %}
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }} RSS feed">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/feed+json" title="{{ metadata.title }} JSON feed">
   </head>
-  <body {% if templateClass %} class="{{ templateClass }}" {% endif %}>
+  <body {% if templateClass -%} class="{{ templateClass }}" {%- endif %}>
     <main>
       {{ content | safe }}
     </main>
-    <footer class="site-footer">
+    <footer
+      class="site-footer">
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ -#}
       <nav class="site-nav">
         {%- for entry in collections.all | eleventyNavigation %}
