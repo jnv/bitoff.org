@@ -69,7 +69,51 @@ ${img}
 ${caption}
 </figure>`;
 }
+/*
+<iframe src="https://codesandbox.io/embed/react-forms-native-validation-kfg10c?fontsize=14&hidenavigation=1&initialpath=%2F404.html&module=%2Fsrc%2F01-plain-form.js&theme=light&view=preview"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="react-forms-native-validation"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
+*/
+
+function codesandbox(
+  urlOrId,
+  runonclick = 0,
+  view = "preview",
+  title = "",
+  path,
+  module
+) {
+  let id = urlOrId;
+  if (urlOrId.startsWith("https://")) {
+    const url = new URL(urlOrId);
+    const pathParts = url.pathname.split("/");
+    id = pathParts[2]; // ['', 's', 'id-1234']
+  }
+
+  const iframeUrl = new URL(id, "https://codesandbox.io/embed/");
+  // https://codesandbox.io/docs/embedding#embed-options
+  const params = {
+    codemirror: 1,
+    hidenavigation: 1,
+    initialpath: path,
+    runonclick,
+    module,
+    view,
+  };
+  for (const [key, value] of Object.entries(params)) {
+    if (value != null) {
+      iframeUrl.searchParams.set(key, value);
+    }
+  }
+
+  return `<iframe class="embed-codesandbox" src="${iframeUrl.toString()}" title="${title}" loading="lazy" sandbox="allow-forms allow-scripts"></iframe>`;
+}
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPairedShortcode("figure", figure);
+  eleventyConfig.addPairedShortcode("codesandbox", codesandbox);
 };
