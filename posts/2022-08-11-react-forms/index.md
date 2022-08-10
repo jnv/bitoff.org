@@ -69,11 +69,12 @@ function Input() {
 
 Now that we have access to this message we can show it to the user. For example, we can store it in a local state and render it. But we also need to prevent the browser from showing the pop-up message – this is done with `e.preventDefault()`.
 
-```jsx
+```jsx/5
 function Input(props) {
   const [validationMessage, setValidationMessage] = useState();
   const invalidHandler = (e) => {
-    setValidationMessage(e.target.validationMessage);
+    const validationMessage = e.target.validationMessage;
+    setValidationMessage(validationMessage);
     e.preventDefault();
   };
   return (
@@ -105,11 +106,12 @@ When you enter a correct e-mail address, the error message is still shown ([try 
 
 This is because the `invalid` handler is triggered only with the form submission. We can listen for additional field events, like `blur` or `change`, to update or hide the validation message.
 
-```jsx
+```jsx/10
 function Input(props) {
   const [validationMessage, setValidationMessage] = useState();
   const invalidHandler = (e) => {
-    setValidationMessage(e.target.validationMessage);
+    const validationMessage = e.target.validationMessage;
+    setValidationMessage(validationMessage);
     e.preventDefault();
   };
   return (
@@ -131,7 +133,7 @@ This is a bare minimum to use native HTML forms validation with React. You can p
 
 {% codesandbox "https://codesandbox.io/embed/react-forms-native-validation-kfg10c", path="/ex-04", module="/src/ex-04.js" %}
 
-## Disadvantages and advantages
+## Advantages and disadvantages
 
 If you have only small amount of simple forms, native HTML validation can get you quickly to usable results.
 
@@ -142,7 +144,7 @@ On the other hand, there are some big caveats.
 For starters, the default **validation messages respect the browser's locale**, not of the page. The result may be a bit confusing. For example, if you use a custom [input `pattern`](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern) with explanation, you can end up with mixed languages in validation message (although it seems like the `title` is displayed only by Firefox).
 
 {% figure "04-mixed-locale.png", "Screenshot of a form with a an email missing a top level domain and validation message about incorrect format in two different languages.'" %}
-An e-mail field with a custom pattern and title explaining the format, displayed in Firefox with Czech locale, results in a validation message in mixed languages ([try it in the sandbox](https://kfg10c.csb.app/ex-05)).
+An e-mail field with a custom pattern and a title, displayed in Firefox with Czech locale. The result is a validation message in mixed languages ([try it in the sandbox](https://kfg10c.csb.app/ex-05)).
 {% endfigure %}
 
 Different browsers provide **different validation messages**, so if you need a tight control over copy, you must provide the messages yourself. You can read field's [`validity` property](https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/validity) which gives you the [validity state](https://developer.mozilla.org/en-US/docs/Web/API/ValidityState). The [article about the constraints validation API](https://css-tricks.com/form-validation-part-2-constraint-validation-api-javascript/#aa-getting-the-error) by CSS Tricks shows a convenient `hasError` function which can get you started. But on the other hand, most libraries give you the same validation messages across all browsers.
