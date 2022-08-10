@@ -54,6 +54,17 @@ a[href].direct-link:focus:visited,
   }
 }
 
+/* Embeds */
+
+iframe {
+  max-width: 100%;
+}
+
+.embed-codesandbox > iframe {
+  width: 100%;
+  height: 500px;
+}
+
 /* Vanity styles */
 
 figure {

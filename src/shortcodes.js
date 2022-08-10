@@ -81,11 +81,7 @@ ${caption}
 
 function codesandbox(
   urlOrId,
-  runonclick = 0,
-  view = "preview",
-  title = "",
-  path,
-  module
+  { runonclick = 0, view = "preview", title = "", path, module }
 ) {
   let id = urlOrId;
   if (urlOrId.startsWith("https://")) {
@@ -110,10 +106,10 @@ function codesandbox(
     }
   }
 
-  return `<iframe class="embed-codesandbox" src="${iframeUrl.toString()}" title="${title}" loading="lazy" sandbox="allow-forms allow-scripts"></iframe>`;
+  return `<div class="embed embed-codesandbox"><iframe class="embed-iframe" src="${iframeUrl.toString()}" title="${title}" loading="lazy" sandbox="allow-forms allow-scripts allow-same-origin"></iframe></div>`;
 }
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPairedShortcode("figure", figure);
-  eleventyConfig.addPairedShortcode("codesandbox", codesandbox);
+  eleventyConfig.addShortcode("codesandbox", codesandbox);
 };
