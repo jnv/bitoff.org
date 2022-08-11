@@ -2,12 +2,11 @@ const path = require("path");
 const { escape } = require("html-escaper");
 const Image = require("@11ty/eleventy-img");
 
-/*
-const WIDTHS = [360, 720, 1440, null];
+const WIDTHS = [720, null];
 const SIZES = [
   "(max-width: 42em) calc(100vw - 2rem)", // small screen with body padding
-  "calc(68ch - 80px)", // other viewports with figure's default margin
-];*/
+  "calc(70ch - 80px)", // other viewports with figure's default margin
+];
 
 function getExt(src) {
   const ext = path.extname(src).substring(1);
@@ -40,7 +39,7 @@ function imageShortcode(src, alt = "") {
   const options = {
     svgShortCircuit: true,
     outputDir: "./_site/img",
-    widths: [null],
+    widths: WIDTHS,
     ...extToOptions(srcExt),
   };
 
@@ -55,6 +54,7 @@ function imageShortcode(src, alt = "") {
     alt: escape(alt),
     loading: "lazy",
     decoding: "async",
+    sizes: SIZES,
   };
   // get metadata even the images are not fully generated
   const metadata = Image.statsSync(fileSrc, options);
