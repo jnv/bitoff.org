@@ -92,7 +92,7 @@ Validation message with custom rendering ([try it in the sandbox](https://dp75ok
 
 <aside>
 
-As a bonus, we can also use CSS pseudo-classes for input validation, like [`:required`](https://developer.mozilla.org/en-US/docs/Web/CSS/:required) and [`:valid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:valid). Sadly, the [`:invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid) pseudo-class applies to all the fields immediately, while the much more useful [`:user-invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:user-invalid) pseudo-class (which applies only to the fields user interacted with) is supported only by Firefox.
+As a bonus, we can also use CSS pseudo-classes for input validation, like [`:required`](https://developer.mozilla.org/en-US/docs/Web/CSS/:required) and [`:valid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:valid). Sadly, the [`:invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid) pseudo-class applies to all the fields immediately, while the more useful [`:user-invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:user-invalid) pseudo-class (which applies to the fields user interacted with) is supported only by Firefox.
 
 </aside>
 
