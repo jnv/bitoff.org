@@ -4,7 +4,7 @@ description: "How to use native HTML forms validation in React and customize the
 syntaxHighlighting: true
 ---
 
-When you encounter form validation in React, you don't need to immediately reach out for some forms library. Try the native forms validation with validation constraints API – you can customize the look of validation messages and their contents. Play around with the [sandbox](https://codesandbox.io/s/lightweight-forms-validation-in-react-dp75ok?file=/src/ex-04.js) and check out the [example repository](https://github.com/jnv/demo-lightweight-forms-validation-react).
+When you encounter form validation in React, you don't need to immediately reach out for some forms library. Try the native forms validation with validation constraints API – you can customize the look of validation messages and their contents. Play with the [final result](https://codesandbox.io/s/lightweight-forms-validation-in-react-dp75ok?file=/src/ex-04.js) and check out the [example repository](https://github.com/jnv/demo-lightweight-forms-validation-react).
 
 ## Form with native validation
 
@@ -129,9 +129,9 @@ function Input(props) {
 }
 ```
 
-This is a bare minimum to use native HTML forms validation with React. You can play with the result in a [sandbox](https://dp75ok.csb.app/ex-04) and here's a [repository](https://github.com/jnv/demo-lightweight-forms-validation-react).
+This is a bare minimum to use native HTML forms validation with React. You can play with the [result in a sandbox](https://dp75ok.csb.app/ex-04) and here's a [repository](https://github.com/jnv/demo-lightweight-forms-validation-react).
 
-{% codesandbox "https://codesandbox.io/embed/lightweight-forms-validation-in-react-dp75ok", path="/ex-04", module="/src/ex-04.js" %}
+{% codesandbox "https://codesandbox.io/embed/lightweight-forms-validation-in-react-dp75ok", path="/ex-04", module="/src/ex-04.js", title="Interactive example of the presented form on CodeSandbox" %}
 
 ## Advantages and disadvantages
 
