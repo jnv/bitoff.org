@@ -2,6 +2,13 @@ const path = require("path");
 const { escape } = require("html-escaper");
 const Image = require("@11ty/eleventy-img");
 
+/*
+const WIDTHS = [360, 720, 1440, null];
+const SIZES = [
+  "(max-width: 42em) calc(100vw - 2rem)", // small screen with body padding
+  "calc(68ch - 80px)", // other viewports with figure's default margin
+];*/
+
 function getExt(src) {
   const ext = path.extname(src).substring(1);
   return ext === "jpg" ? "jpeg" : ext;
@@ -10,15 +17,12 @@ function getExt(src) {
 function extToOptions(ext) {
   switch (ext) {
     case "jpeg":
-      return { formats: ["avif", "webp", "jpeg"] };
+      return { formats: ["webp", "jpeg"] };
     case "png":
       return {
-        formats: ["avif", "webp", "png"],
+        formats: ["webp", "png"],
         sharpWebpOptions: {
           nearLossless: true,
-        },
-        sharpAvifOptions: {
-          lossless: true,
         },
       };
     default:
@@ -36,6 +40,7 @@ function imageShortcode(src, alt = "") {
   const options = {
     svgShortCircuit: true,
     outputDir: "./_site/img",
+    widths: [null],
     ...extToOptions(srcExt),
   };
 
