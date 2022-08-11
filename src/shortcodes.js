@@ -38,9 +38,8 @@ function codesandbox(
     }
   }
 
-  return `<div class="embed embed-codesandbox"><iframe class="embed-iframe" src="${iframeUrl.toString()}" title="${title}" loading="lazy" sandbox="allow-forms allow-scripts allow-same-origin"></iframe></div>`;
+  return `<div class="embed embed-codesandbox"><iframe class="embed-iframe" src="${iframeUrl.toString()}" title="${title}" loading="lazy" sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></iframe></div>`;
 }
-
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPairedShortcode("figure", figure);
   eleventyConfig.addShortcode("codesandbox", codesandbox);
