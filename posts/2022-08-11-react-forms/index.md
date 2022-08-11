@@ -106,7 +106,7 @@ When you enter a correct e-mail address, the error message is still shown ([try 
 
 This is because the `invalid` handler is triggered only with the form submission. We can listen for additional field events, like `blur` or `change`, to update or hide the validation message.
 
-```jsx/10
+```jsx/11
 function Input(props) {
   const [validationMessage, setValidationMessage] = useState();
   const invalidHandler = (e) => {
