@@ -1,6 +1,6 @@
 ---
 title: Lightweight Forms Validation in React
-description: ""
+description: "How to use native HTML forms validation in React and customize the validation messages."
 syntaxHighlighting: true
 ---
 
