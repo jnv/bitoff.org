@@ -11,16 +11,24 @@ templateClass: tmpl-post
   </p>
 </header>
 {{ content | safe }}
-
+{% if discussion %}
+  <aside class="post-discussion">
+    <h2>Discussion</h2>
+    <p>
+      Discuss this post on {{ discussion | linkifyMap | safe }}.
+    </p>
+  </aside>
+{% endif %}
 {#
-<footer class="post-footer">
-  <p>
-    <small>
-      Licensed under
-      <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license">
-        <abbr title="Creative Commons Zero">CC0</abbr>
-        1.0 Universal</a>. No rights reserved.
-    </small>
-  </p>
+<footer
+  class="post-footer">
+      <p>
+        <small>
+          Licensed under
+          <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license">
+            <abbr title="Creative Commons Zero">CC0</abbr>
+            1.0 Universal</a>. No rights reserved.
+        </small>
+      </p>
 </footer>
 #}
