@@ -5,9 +5,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #393a34;
-  font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier,
-    monospace;
+  color: #000;
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -28,13 +26,6 @@ pre[class*="language-"] {
 
 pre > code[class*="language-"] {
   font-size: 1em;
-}
-
-pre[class*="language-"]::-moz-selection,
-pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection,
-code[class*="language-"] ::-moz-selection {
-  background: #c1def1;
 }
 
 pre[class*="language-"]::selection,
@@ -80,7 +71,7 @@ pre[class*="language-"] {
 
 .token.punctuation,
 .token.operator {
-  color: #393a34; /* no highlight */
+  color: #000; /* no highlight */
 }
 
 .token.url,
@@ -104,7 +95,7 @@ code[class*="language-css"] {
 }
 
 .token.function {
-  color: #393a34;
+  color: #000;
 }
 
 .token.deleted,
@@ -149,7 +140,7 @@ code[class*="language-css"] {
 
 .token.directive.tag .tag {
   background: #ffff00;
-  color: #393a34;
+  color: #000;
 }
 
 /* overrides color-values for the Line Numbers plugin

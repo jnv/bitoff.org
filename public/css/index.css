@@ -23,6 +23,16 @@ img {
   height: auto;
 }
 
+/**
+ * From: https://github.com/csstools/normalize.css/blob/main/opinionated.css
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+ :where(code, kbd, samp, pre) {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
 pre code {
   white-space: pre-wrap;
 }
