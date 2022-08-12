@@ -5,6 +5,7 @@ syntaxHighlighting: true
 discussion:
   Dev.to: https://dev.to/jnv/lightweight-forms-validation-in-react-35og
   Twitter: https://twitter.com/janvlnas/status/1557802040851587072
+  Mastodon: https://mastodon.social/@jnv/108805752174043109
 ---
 
 When you encounter form validation in React, you don't need to immediately reach out for some forms library. Try the native forms validation with validation constraints API – you can customize the look of validation messages and their contents. Play with the [final result](https://codesandbox.io/s/lightweight-forms-validation-in-react-dp75ok?file=/src/ex-04.js) and check out the [example repository](https://github.com/jnv/demo-lightweight-forms-validation-react).
