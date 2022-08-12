@@ -9,9 +9,8 @@
     <meta name="generator" content="{{ eleventy.generator }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     {% if syntaxHighlighting -%}
-      <link rel="stylesheet" href="{{ '/css/prism-vs.css' | url }}">
-      <link rel="stylesheet" href="{{ '/css/prism-diff.css' | url }}">
-    {%- endif %}
+      <link rel="stylesheet" href="{{ '/css/prism.css' | url }}">
+    {%- endif -%}
     <link rel="icon" href="{{ '/favicon.ico' | url }}" sizes="any">
     <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | url }}">
     <link rel="canonical" href="{{ canonical or absoluteUrl }}">
