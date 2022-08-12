@@ -3,7 +3,6 @@
 permalink: "{{ metadata.jsonfeed.path }}"
 eleventyExcludeFromCollections: true
 ---
-
 {
   "version": "https://jsonfeed.org/version/1.1",
   "title": "{{ metadata.title }}",
@@ -22,7 +21,7 @@ eleventyExcludeFromCollections: true
           "id": "{{- metadata.feed.id }}:posts:{{ post.fileSlug -}}",
           "url": "{{- absolutePostUrl -}}",
           "title": "{{- post.data.title -}}",
-          "date_published": "{{ post.date | rssDate }}",
+          "date_published": "{{ post.date | dateToRfc3339 }}",
           "content_html":{%- if post.templateContent %}{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | dump | safe }}
           {%- else -%}
             ""
