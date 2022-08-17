@@ -18,6 +18,17 @@ module.exports = function (eleventyConfig) {
   addFilters(eleventyConfig);
   addShortcodes(eleventyConfig);
 
+  // For JSON feed
+  eleventyConfig.addJavaScriptFunction("absoluteUrl", pluginRss.absoluteUrl);
+  eleventyConfig.addJavaScriptFunction(
+    "htmlToAbsoluteUrls",
+    pluginRss.convertHtmlToAbsoluteUrls
+  );
+  eleventyConfig.addJavaScriptFunction(
+    "dateToRfc3339",
+    pluginRss.dateToRfc3339
+  );
+
   eleventyConfig.amendLibrary("md", (mdLib) => {
     mdLib.use(markdownItAnchor, {
       level: [1, 2, 3, 4],
@@ -33,7 +44,7 @@ module.exports = function (eleventyConfig) {
   return {
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid
-    templateFormats: ["md", "njk", "html", "liquid"],
+    templateFormats: ["md", "njk", "html", "11ty.js"],
 
     // Pre-process *.md files with: (default: `liquid`)
     markdownTemplateEngine: "njk",
