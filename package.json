@@ -28,7 +28,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "html-escaper": "^3.0.3",
     "luxon": "^3.0.4",
-    "markdown-it-anchor": "^8.6.4"
+    "markdown-it-anchor": "^8.6.5"
   },
   "devDependencies": {
     "prettier": "2.7.1"
