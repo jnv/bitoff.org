@@ -2,6 +2,6 @@
 permalink: false
 eleventyNavigation:
   key: source
-  url: https://github.com/jnv/jnv.zone
+  url: https://github.com/jnv/bitoff.org
   order: 20
 ---

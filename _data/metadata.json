@@ -1,13 +1,13 @@
 {
-  "title": "jnv.zone",
-  "url": "https://www.jnv.zone/",
+  "title": "bit off",
+  "url": "https://www.bitoff.org/",
   "language": "en",
   "description": "An occassional weblog.",
   "feed": {
     "subtitle": "An occassional weblog.",
     "filename": "feed.xml",
     "path": "/feed.xml",
-    "id": "tag:jnv.zone,2022-07-14:website",
+    "id": "tag:bitoff.org,2023-01-04:website",
     "limit": 10
   },
   "jsonfeed": {
@@ -15,7 +15,7 @@
   },
   "author": {
     "name": "Jan Vlnas",
-    "email": "hello@jnv.zone",
+    "email": "hello@bitoff.org",
     "url": "https://jan.vlnas.cz"
   }
 }

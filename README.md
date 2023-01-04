@@ -1,4 +1,3 @@
-# jnv.zone
+# bitoff.org
 
-Source code of [jnv.zone](https://www.jnv.zone), based on [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog).
-
+Source code of [bit off](https://www.bitoff.org), based on [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog).
