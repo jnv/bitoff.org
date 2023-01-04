@@ -42,7 +42,8 @@ function imageShortcode(src, alt = "") {
   const srcExt = getExt(src);
   const options = {
     svgShortCircuit: true,
-    outputDir: "./.cache/img",
+    outputDir: "./_site/img/generated",
+    urlPath: "/img/generated/",
     widths: WIDTHS,
     ...extToOptions(srcExt),
   };

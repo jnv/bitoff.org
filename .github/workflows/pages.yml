@@ -35,8 +35,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            .cache/img
-          key: 11ty-images-cache
+            _site/img/generated
+            .cache
+          key: 11ty-static-cache
       - name: Install dependencies
         run: npm ci
       - name: Build the site
