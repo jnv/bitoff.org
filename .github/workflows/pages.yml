@@ -30,12 +30,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18"
-          cache: 'npm'
+          cache: "npm"
       - name: Restore cache
         uses: actions/cache@v3
         with:
           path: |
-            .cache
+            .cache/img
+          key: 11ty-images-cache
       - name: Install dependencies
         run: npm ci
       - name: Build the site
