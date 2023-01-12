@@ -1,16 +1,16 @@
 ---
 layout: layouts/base.njk
 templateClass: tmpl-post
+mainClass: h-entry
 ---
 
 <header class="post-header">
-  <h1 class="post-title">{{ title }}</h1>
-  <p class="post-published">
-    Published on
-    <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-  </p>
+  <h1 class="post-title p-name">{{ title }}</h1>
+  {% include 'postDate.njk' -%}
 </header>
-{{ content | safe }}
+<div class="e-content">
+  {{ content | safe }}
+</div>
 {% if discussion %}
   <aside class="post-discussion">
     <h2>Discussion</h2>
