@@ -28,7 +28,7 @@ img {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
- :where(code, kbd, samp, pre) {
+:where(code, kbd, samp, pre) {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
@@ -42,7 +42,7 @@ pre code {
   font-family: sans-serif;
   text-decoration: none;
   font-style: normal;
-  margin-left: .1em;
+  margin-left: 0.1em;
 }
 a[href].direct-link,
 a[href].direct-link:visited {
@@ -88,7 +88,6 @@ figcaption p {
   margin-top: 0.5rem;
 }
 
-
 .site-footer {
   margin-top: 3rem;
 }
@@ -97,20 +96,8 @@ figcaption p {
   margin-right: 1rem;
 }
 
-.postlist {
-  margin: 0;
-  padding: 0;
-}
-
 .postlist-item {
-  display: flex;
-  margin-bottom: 0.75rem;
-  gap: 1rem;
-}
-.postlist-date {
-  width: 8ch;
-  flex: none;
-  text-align: right;
+  list-style: none;
 }
 
 .post-header {

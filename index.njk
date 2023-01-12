@@ -12,15 +12,22 @@ eleventyNavigation:
 </p>
 <ul class="postlist">
   {% for post in collections.posts | reverse %}
-    <li class="postlist-item">
-      <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | shortDate }}</time>
-      <a href="{{ post.url | url }}" class="postlist-link">
-        {% if post.data.title %}
-          {{ post.data.title }}
-        {% else %}
-          <code>{{ post.url }}</code>
-        {% endif %}
-      </a>
+    <li class="postlist-item h-entry" role="article">
+      <header>
+        <h2 class="p-name">
+          <a href="{{ post.url | url }}" class="u-url u-uid">
+            {% if post.data.title %}
+              {{ post.data.title }}
+            {% else %}
+              <code>{{ post.url }}</code>
+            {% endif %}
+          </a>
+        </h2>
+        {% include 'postDate.njk' %}
+      </header>
+      {% if post.data.description %}
+        <p class="p-summary postlist-description">{{ post.data.description }}</p>
+      {% endif %}
     </li>
   {% endfor %}
 </ul>
