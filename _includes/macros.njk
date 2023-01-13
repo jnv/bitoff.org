@@ -1,0 +1,6 @@
+{% macro postDate(post) -%}
+  <p class="post-published">
+    Published on
+    <time class="dt-published" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+  </p>
+{%- endmacro %}

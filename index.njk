@@ -5,6 +5,7 @@ eleventyNavigation:
   order: 1
 ---
 
+{%- from "macros.njk" import postDate -%}
 <p class="home-intro">
   <strong>bit off</strong>
   is an occassional weblog written by
@@ -16,18 +17,18 @@ eleventyNavigation:
       <header>
         <h2 class="p-name">
           <a href="{{ post.url | url }}" class="u-url u-uid">
-            {% if post.data.title %}
+            {% if post.data.title -%}
               {{ post.data.title }}
-            {% else %}
+            {%- else -%}
               <code>{{ post.url }}</code>
-            {% endif %}
+            {%- endif %}
           </a>
         </h2>
-        {% include 'postDate.njk' %}
+        {{ postDate(post) }}
       </header>
-      {% if post.data.description %}
+      {% if post.data.description -%}
         <p class="p-summary postlist-description">{{ post.data.description }}</p>
-      {% endif %}
+      {%- endif %}
     </li>
   {% endfor %}
 </ul>
