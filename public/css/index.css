@@ -96,8 +96,12 @@ figcaption p {
   margin-right: 1rem;
 }
 
+.postlist {
+  padding: 0;
+}
 .postlist-item {
   list-style: none;
+  margin-bottom: 2rem;
 }
 
 .post-header {
