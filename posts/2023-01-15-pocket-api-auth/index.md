@@ -3,7 +3,7 @@ title: "Exploring Pocket API: Authentication"
 description: ""
 ---
 
-I've been using [Pocket](https://getpocket.com/) for quite some time and recently I've decided to build something on top of their API. And since Pocket's API is a bit dated and resources are scarce, I've collected my notes and thoughts on the API as a future reference for myself – perhaps it will be useful to you.
+I've been using [Pocket](https://getpocket.com/) for quite some time. Recently, I've decided to build something on top of their API. And since Pocket's API is a bit dated and resources are scarce, I've collected my notes and thoughts on the API as a future reference for myself – perhaps it will be useful to you.
 
 The first thing I needed to figure out was authentication. The good news is the authentication flow is [well documented](https://getpocket.com/developer/docs/authentication). The bad news is immediately in the first sentence:
 
@@ -11,7 +11,7 @@ The first thing I needed to figure out was authentication. The good news is the 
 
 (Emphasis mine.)
 
-“Variant of OAuth 2.0” reeks of custom authentication schemes, which usually spells trouble. It turns out that while Pocket's authentication scheme is non-standard, it's actually closer to OAuth _1.0_ flow with “temporary credentials”. Minus all the requests signing characteristic for OAuth 1.0.
+“Variant of OAuth 2.0” reeks of custom authentication schemes, which usually spells trouble. It turns out that while Pocket's authentication scheme is non-standard, it's actually closer to OAuth _1.0_ flow with “temporary credentials”. Minus all the request signing characteristic for OAuth 1.0.
 
 ## Pocket authentication vs. OAuth 2.0 Authorization Code Flow
 
@@ -36,7 +36,7 @@ sequenceDiagram
     deactivate U
 ```
 
-The consumer application identifies itself by the client ID. Provider also keeps a list of allowed callback URLs, so it's not possible to steal the authorization code by redirecting the user to a malicious app.
+The consumer application identifies itself by the client ID. The provider also keeps a list of allowed callback URLs, so it's not possible to steal the authorization code by redirecting the user to a malicious app.
 
 Pocket's authentication scheme is a bit different:
 
@@ -61,13 +61,13 @@ sequenceDiagram
     deactivate U
 ```
 
-The consumer app asks for a request token (“temporary credentials”) at the beginning of the flow, which it later exchanges for an access token. It's sort of like getting a blank ticket and later validating it.
+The consumer app asks for a request token (“temporary credentials”) at the beginning of the flow, which it later exchanges for an access token. It's like getting a blank ticket and later validating it.
 
-In the Authorization Code Flow, the provider adds the authorization code to the callback URL, so there's no need to store any state during the authorization. In case of Pocket's flow the request token needs to be stored somewhere, typically in a session or in a cookie.
+In the Authorization Code Flow, the provider adds the authorization code to the callback URL, so there's no need to store any state during the authorization. In case of Pocket's flow, the request token needs to be stored somewhere, typically in a session or in a cookie.
 
 On the other hand, Pocket doesn't need to know a list of allowed URLs. Even if the user were redirected to a malicious client app, it wouldn't know the original request token and couldn't exchange it for an access token.
 
-The current version of Pocket API was [introduced in 2012](https://blog.getpocket.com/2012/11/introducing-the-new-pocket-api-for-developers-and-publishers/) which is the same year when OAuth 2.0 was finished. So I think the authentication scheme ended up somewhere in between OAuth 1.0 and 2.0: it's mostly OAuth 1.0 flow without requests signing, which was also removed in OAuth 2.0.
+The current version of Pocket API was [introduced in 2012](https://blog.getpocket.com/2012/11/introducing-the-new-pocket-api-for-developers-and-publishers/) which is the same year when OAuth 2.0 was finished. So, I think the authentication scheme ended up somewhere in between OAuth 1.0 and 2.0: it's mostly OAuth 1.0 flow without requests signing, which was also removed in OAuth 2.0.
 
 ## Pocket authentication in Node.js
 
@@ -108,7 +108,7 @@ async function main() {
 main();
 ```
 
-The script will show an URL with the request token, and after 20 seconds it attempts to grab the access key – you need to authorize access to Pocket in the meantime.
+The script will show a URL with the request token, and after 20 seconds it attempts to grab the access key – meanwhile, you need to authorize access to Pocket.
 
 Only later I've found that Michael also built a [CLI tool for pocket-auth](https://github.com/mheap/pocket-auth-cli), which is much more convenient. Just run the tool with consumer key as argument, and it will handle the whole flow.
 
