@@ -69,5 +69,4 @@ On the other hand, Pocket doesn't need to know a list of allowed URLs. Even if t
 
 I think the Pocket's authentication flow was designed with mobile applications in mind (“public clients” in OAuth 2.0 terms). There are no client secrets and the documentation goes into a great length to explain how to redirect the user to a mobile Pocket app for authorization if it's installed.
 
-## Authentication flow in Node.js
-
+## Pocket authentication in Node.js
