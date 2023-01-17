@@ -1,21 +1,23 @@
 ---
-title: "Exploring Pocket API: Authentication"
+title: "Exploring Pocket API: Authorization"
 description: ""
 ---
 
 I've been using [Pocket](https://getpocket.com/) for quite some time. Recently, I've decided to build something on top of their API. And since Pocket's API is a bit dated and resources are scarce, I've collected my notes and thoughts on the API as a future reference for myself – perhaps it will be useful to you.
 
-The first thing I needed to figure out was authentication. The good news is the authentication flow is [well documented](https://getpocket.com/developer/docs/authentication). The bad news is immediately in the first sentence:
+The first thing I needed to figure out was authorization. The good news is the authorization flow is [well documented](https://getpocket.com/developer/docs/authentication). The bad news is immediately in the first sentence:
 
 > The Pocket Authentication API uses _a variant of OAuth 2.0_ for authentication.
 
 (Emphasis mine.)
 
-“Variant of OAuth 2.0” reeks of custom authentication schemes, which usually spells trouble. It turns out that while Pocket's authentication scheme is non-standard, it's actually closer to OAuth _1.0_ flow with “temporary credentials”. Minus all the request signing characteristic for OAuth 1.0.
+“Variant of OAuth 2.0” reeks of custom authorization schemes, which usually spells trouble. But while Pocket's authentication scheme is non-standard, it's actually closer to OAuth _1.0_ flow with “temporary credentials”. Minus all the request signing characteristic for OAuth 1.0.
 
-## Pocket authentication vs. OAuth 2.0 Authorization Code Flow
+## Pocket authorization vs. OAuth 2.0 Authorization Code Flow
 
 My simple understanding of a typical OAuth 2.0 Authorization Code Flow is this:
+
+{#
 
 ```mermaid
 sequenceDiagram
@@ -36,9 +38,19 @@ sequenceDiagram
     deactivate U
 ```
 
+#}
+
+{% figure "diagram-oauth2.svg" %}
+
+OAuth 2.0 Authorization Code Flow (very simplified)
+
+{% endfigure %}
+
 The consumer application identifies itself by the client ID. The provider also keeps a list of allowed callback URLs, so it's not possible to steal the authorization code by redirecting the user to a malicious app.
 
-Pocket's authentication scheme is a bit different:
+Pocket's authorization flow is a bit different:
+
+{#
 
 ```mermaid
 sequenceDiagram
@@ -61,17 +73,25 @@ sequenceDiagram
     deactivate U
 ```
 
+#}
+
+{% figure "diagram-pocket-auth.svg" %}
+
+Pocket authorization flow (very simplified)
+
+{% endfigure %}
+
 The consumer app asks for a request token (“temporary credentials”) at the beginning of the flow, which it later exchanges for an access token. It's like getting a blank ticket and later validating it.
 
 In the Authorization Code Flow, the provider adds the authorization code to the callback URL, so there's no need to store any state during the authorization. In case of Pocket's flow, the request token needs to be stored somewhere, typically in a session or in a cookie.
 
 On the other hand, Pocket doesn't need to know a list of allowed URLs. Even if the user were redirected to a malicious client app, it wouldn't know the original request token and couldn't exchange it for an access token.
 
-The current version of Pocket API was [introduced in 2012](https://blog.getpocket.com/2012/11/introducing-the-new-pocket-api-for-developers-and-publishers/) which is the same year when OAuth 2.0 was finished. So, I think the authentication scheme ended up somewhere in between OAuth 1.0 and 2.0: it's mostly OAuth 1.0 flow without requests signing, which was also removed in OAuth 2.0.
+The current version of Pocket API was [introduced in 2012](https://blog.getpocket.com/2012/11/introducing-the-new-pocket-api-for-developers-and-publishers/) which is the same year when OAuth 2.0 was finished. So, I think the authorization scheme ended up somewhere in between OAuth 1.0 and 2.0: it's mostly OAuth 1.0 flow without requests signing, which was also removed in OAuth 2.0.
 
-## Pocket authentication in Node.js
+## Pocket authorizatiom in Node.js
 
-Since no API client tool like Postman or Hoppscotch can handle Pocket's authentication scheme, I had to implement it on my own.
+Since no API client tool like Postman or Hoppscotch can handle Pocket's authorizatiom scheme, I had to implement it on my own.
 
 Luckily, there are a few Node.js libraries handling the scheme, but most of them are over 5 years old. I've picked [pocket-auth](https://github.com/mheap/pocket-auth) by Michael Heap, and got my access token with this code modified from the library's example:
 
