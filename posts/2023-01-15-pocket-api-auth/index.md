@@ -40,7 +40,7 @@ sequenceDiagram
 
 #}
 
-{% figure "diagram-oauth2.svg" %}
+{% figure "diagram-oauth2.svg", "OAuth 2.0 Authorization Code Flow redirects user back to the consumer app with authorization code. User passes the authorization code to the consumer app, which exchanges it for access token." %}
 
 OAuth 2.0 Authorization Code Flow (very simplified)
 
@@ -75,7 +75,7 @@ sequenceDiagram
 
 #}
 
-{% figure "diagram-pocket-auth.svg" %}
+{% figure "diagram-pocket-auth.svg", "In Pocket authorization flow the consumer app first obtains a request token which user passes to the authorization to Pocket. After the user authorizaes the consumer app, the app exchanges the request token for an access token." %}
 
 Pocket authorization flow (very simplified)
 
