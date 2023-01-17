@@ -7,7 +7,7 @@ mainClass: h-entry
 {%- from "macros.njk" import postDate -%}
 <header class="post-header">
   <h1 class="post-title p-name">{{ title }}</h1>
-  {{ postDate(post) }}
+  {{ postDate(page) }}
 </header>
 <div class="e-content">
   {{ content | safe }}
