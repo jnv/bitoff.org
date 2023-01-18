@@ -1,9 +1,9 @@
 ---
 title: "Exploring Pocket API: Authorization"
-description: ""
+description: "Dive into the Pocket's OAuth-but-not-quite authorization flow."
 ---
 
-I've been using [Pocket](https://getpocket.com/) for quite some time. Recently, I've decided to build something on top of their API. And since Pocket's API is a bit dated and resources are scarce, I've collected my notes and thoughts on the API as a future reference for myself – perhaps it will be useful to you.
+I've been using [Pocket](https://getpocket.com/) for quite some time. Recently, I wanted to build something on top of their API. I've collected my notes and thoughts on Pocket API as a future reference for myself. Perhaps it will be useful to you.
 
 The first thing I needed to figure out was authorization. The good news is the authorization flow is [well documented](https://getpocket.com/developer/docs/authentication). The bad news is immediately in the first sentence:
 
