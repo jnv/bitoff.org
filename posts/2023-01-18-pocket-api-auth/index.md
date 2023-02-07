@@ -75,7 +75,7 @@ sequenceDiagram
 
 #}
 
-{% figure "diagram-pocket-auth.svg", "In Pocket authorization flow the consumer app first obtains a request token which user passes to the authorization to Pocket. After the user authorizaes the consumer app, the app exchanges the request token for an access token." %}
+{% figure "diagram-pocket-auth.svg", "In Pocket authorization flow the consumer app first obtains a request token which user passes to the authorization to Pocket. After the user authorizes the consumer app, the app exchanges the request token for an access token." %}
 
 Pocket authorization flow (very simplified)
 
@@ -89,9 +89,9 @@ On the other hand, Pocket doesn't need to know a list of allowed URLs. Even if t
 
 The current version of Pocket API was [introduced in 2012](https://blog.getpocket.com/2012/11/introducing-the-new-pocket-api-for-developers-and-publishers/) which is the same year when OAuth 2.0 was finished. So, I think the authorization scheme ended up somewhere in between OAuth 1.0 and 2.0: it's mostly OAuth 1.0 flow without requests signing, which was also removed in OAuth 2.0.
 
-## Pocket authorizatiom in Node.js
+## Pocket authorization in Node.js
 
-Since no API client tool like Postman or Hoppscotch can handle Pocket's authorizatiom scheme, I had to implement it on my own.
+Since no API client tool like Postman or Hoppscotch can handle Pocket's authorization scheme, I had to implement it on my own.
 
 Luckily, there are a few Node.js libraries handling the scheme, but most of them are over 5 years old. I've picked [pocket-auth](https://github.com/mheap/pocket-auth) by Michael Heap, and got my access token with this code modified from the library's example:
 
