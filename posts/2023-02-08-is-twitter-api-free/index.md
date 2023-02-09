@@ -11,7 +11,7 @@ To help fellow developers, I've made a website to provide a definitive answer to
 
 ## A single-serving site
 
-{% figure "istwitterapifree.png", alt="Screenshot of the website: Is Twitter API free? Yes. Not for long. The deadline is tomorrow. But maybe you can use it for posting if Elon likes you." %}
+{% figure "istwitterapifree.png", "Screenshot of the website: Is Twitter API free? Yes. Not for long. The deadline is tomorrow. But maybe you can use it for posting if Elon likes you." %}
 
 istwitterapifree.com as of February 8th.
 
@@ -41,7 +41,7 @@ The site generator creates a [feed with a single entry](https://istwitterapifree
 
 This feed is passed to automation. For Twitter, I've used <acronym title="If This Then That">IFTTT</acronym> to post a new feed item to the Twitter account. I assume that a larger provider like IFTTT already pays for Twitter API, so it won't be affected.
 
-{% figure "ifttt.png", alt="Screenshot of IFTTT applet: If new feed item, then post a tweet." %}
+{% figure "ifttt.png", "Screenshot of IFTTT applet: If new feed item, then post a tweet." %}
 
 The whole magic behind the [IsTwApiFree bot](https://twitter.com/IsTwApiFree).
 

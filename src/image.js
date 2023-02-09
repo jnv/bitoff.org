@@ -1,5 +1,4 @@
 const path = require("path");
-const { escape } = require("html-escaper");
 const Image = require("@11ty/eleventy-img");
 
 const WIDTHS = [720, null];
@@ -60,8 +59,7 @@ function imageShortcode(src, alt = "") {
   const originalFile = lastItem(metadata[srcExt]);
   const originalWidth = originalFile.width;
   const imageAttributes = {
-    // ffs https://github.com/11ty/eleventy-img/issues/82
-    alt: escape(alt),
+    alt,
     loading: "lazy",
     decoding: "async",
     sizes: getSizes(originalWidth),

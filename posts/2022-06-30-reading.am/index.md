@@ -15,13 +15,13 @@ Back in 2012 I have discovered a small social network. Now, after 10 years and o
 
 > "Share what you're reading. Not what you like. Not what you find interesting. Just what you're reading."
 
-{% figure "homepage.png", alt="Screenshot of the Reading homepage with a list of posted links and title Some people are reading this stuff." %}
+{% figure "homepage.png", "Screenshot of the Reading homepage with a list of posted links and title Some people are reading this stuff." %}
 Reading homepage.
 {% endfigure %}
 
 Whenever I read something on the web, I used a bookmarklet (or extension, or email) to post the link to Reading.
 
-{% figure "overlay.png", alt='A screenshot of a web page with Reading\'s overlay with "yep", "nope", and "share" buttons' %}
+{% figure "overlay.png", 'A screenshot of a web page with Reading\'s overlay with "yep", "nope", and "share" buttons' %}
 Reading overlay on the page.
 {% endfigure %}
 
