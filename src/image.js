@@ -24,11 +24,6 @@ function extToOptions(ext) {
   }
 }
 
-// Until we get .at in Node 18
-function lastItem(arr) {
-  return arr[arr.length - 1];
-}
-
 function getSizes(largestWidth) {
   const sizes = [
     "(max-width: 42em) calc(100vw - 2rem)", // small screen with body padding
@@ -56,7 +51,7 @@ function imageShortcode(src, alt = "") {
   // get metadata even the images are not fully generated
   const metadata = Image.statsSync(fileSrc, options);
 
-  const originalFile = lastItem(metadata[srcExt]);
+  const originalFile = metadata[srcExt].at(-1);
   const originalWidth = originalFile.width;
   const imageAttributes = {
     alt,
