@@ -13,7 +13,7 @@ To help fellow developers, I've made a website to provide a definitive answer to
 
 {% figure "istwitterapifree.png", "Screenshot of the website: Is Twitter API free? Yes. Not for long. The deadline is tomorrow. But maybe you can use it for posting if Elon likes you." %}
 
-istwitterapifree.com as of February 8th.
+IsTwitterApiFree.com as of February 8th.
 
 {% endfigure %}
 
