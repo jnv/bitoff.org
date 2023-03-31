@@ -1,11 +1,12 @@
 ---
 title: "LinkedIn's New Posts API: The Good, The Bad, and The Ugly"
 description: ""
+syntaxHighlighting: true
 ---
 
 Last summer LinkedIn [announced new API versioning][li-versioning-announcement] and plans to migrate existing API endpoints to the new versioning scheme along with some other improvements. The first set of endpoints to be migrated by LinkedIn were [Posts API][posts-api], responsible for working with users' and business profiles' posts.
 
-There was also a deadline: by February 2023, existing API users must migrate to the new Posts API and the old endpoints will stop functioning. That gave integration partners around 8 months for migration, but apparently that was not sufficient. So on the last day of February LinkedIn announced deadline extension to TODO.
+There was also a deadline: by February 2023, existing API users must migrate to the new Posts API and the old endpoints will stop functioning. That gave integration partners around 8 months for migration, but apparently that was not sufficient. So on the last day of February LinkedIn announced deadline extension to June 30.
 
 Since I've migrated [LinkedIn's integration through Superface][sf-linkedin], I wrote down a few notes about the overall experience and frustrations with LinkedIn's new API and this particular deprecation.
 
@@ -122,7 +123,7 @@ For the versioned API “reboot” LinkedIn chose a [calendar-based versioning s
 
 I think calendar-based versioning is a right call for quickly evolving APIs and it seems to be ever more popular choice. GitHub [announced a similar versioning scheme](https://github.blog/2022-11-28-to-infinity-and-beyond-enabling-the-future-of-githubs-rest-api-with-api-versioning/) in November. And combined with a stable support window (something what [Facebook is doing with Graph API]()), it provides a predictability and stable pace for API consumers.
 
-However, it's not clear to me how exactly the deprecations will be handled, which I [address below]().
+However, it's not clear to me how exactly the deprecations will be handled, which I [address below](#not-so-clear-deprecation-strategy)).
 
 ### Communication to integration partners
 
@@ -236,20 +237,48 @@ I agree with this approach in principle. I've experienced first-hand customer co
 
 [^fb-debugger]: Unlike Facebook which provides a [convenient tool](https://developers.facebook.com/tools/debug/) for debugging and refreshing link previews.
 
-So putting the responsibility for generating a link preview fully into API clients' hands makes sense. But on the client's side it adds extra complexity to the publishing process.
+So putting the responsibility for generating a link preview fully on API clients' side makes sense. However, it adds an extra complexity to the publishing process.
 
-Sure, you could just willy-nilly scrape arbitrary pages you want to publish. But sometimes that won't work. I dealt with websites whose owners were paranoid about _any_ scraping, and blocked any requests coming from unknown bots. In the end they allowlisted our scraper based on its user-agent string.
+Sure, you could just willy-nilly scrape arbitrary pages you want to publish. But sometimes that won't work. I've dealt with websites whose owners were paranoid about _any_ scraping, and blocked any requests coming from unknown bots. In the end they allowlisted our link preview scraper, but it took some negotiation.
 
-LinkedIn could simplify this process, and help both developers and paranoid site owners, by providing a separate API endpoint for scraping the URL. Facebook [already provides this feature](https://developers.facebook.com/docs/graph-api/reference/v16.0/url)
+LinkedIn could simplify this process, and help both developers and paranoid site owners by providing a separate API endpoint for scraping URL previews. Similar to Facebook which [already provides this feature](https://developers.facebook.com/docs/graph-api/reference/v16.0/url) (and by providing the `scrape=true` query parameter you can refresh the cached data).
 
 ### The migration guide is somewhat useless
 
+LinkedIn provides convenient [migration guides](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/migrations) for individual APIs.
+Unfortunately the [Content APIs migration guide](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/community-management/contentapi-migration-guide) left me struggling with the new API. Sure, it how individual fields in schemas were renamed, simplified, or removed (although a direct JSON to JSON comparison would be probably more descriptive) and it briefly describes how the workflow changed. But it's still too brief.
+
+If you need me to change the workflow, show me step by step how it differs from the old one. Even better, show me some code. The guide also doesn't mention anything about the removal of field projections, but maybe the usage of this feature was way too marginal.
+
 ### Not-so-clear deprecation strategy
 
-[li-versioning-announcement]:
-[posts-api]:
-[sf-linkedin]:
+The [versioning guide mentions](https://learn.microsoft.com/en-us/linkedin/marketing/versioning?view=li-lms-2023-03#keep-up-with-us) that LinkedIn expects their partners to “keep with them”:
+
+> LinkedIn expects that our LinkedIn Marketing API Program API partners work to deliver the latest and most valuable experiences to our customers within a reasonable time of their availability. _As a result, we will sunset our API versions as early as one (1) year after release._[^emph]
+
+[^emph]: Emphasis mine.
+
+Since no versioned API reached its end-of-life yet, I have yet to see what “sunsetting an API version” means. I think it could be one of these options:
+
+1. The requests start immediately return an error on the first day of 13th month. (But what error? What status code?)
+2. The requests will probably work for some time, but can break at any time – it's your risk to call an outdated API.
+3. We will automatically redirect your outdated calls to a newer API version and it will work as long as we don't introduce any breaking changes to the request schema.
+
+The third option is something what Facebook does. I occasionally run into code using 5+ years old API versions,[^passport] and it still works. I suspect LinkedIn could go with the first or second option. If this will be the case, I hope they'll provide developers with an early warning that their integrations are about to break. In other words:
+
+- Provide developers with API versions usage in app analytics.
+- Describe in gory details what exactly happens after the API reaches the end-of-life.
+
+## Conclusion
+
+So that's probably way too much words about the new LinkedIn API. Despite my criticism, I think it's still an overall improvement and I'm glad LinkedIn takes the developer experience seriously, unlike other social media ([ahem](/is-twitter-api-free/)).
+
+[^passport]: In [passport-facebook](https://github.com/jaredhanson/passport-facebook/blob/22aaab2a5c8b036e68287aa32ebe8f2bb68afb5c/lib/strategy.js#L50) for example.
+
+[li-versioning-announcement]: https://www.linkedin.com/developers/news/featured-updates/versioning-content-launch
+[posts-api]: https://learn.microsoft.com/en-us/linkedin/marketing/integrations/community-management/shares/posts-api
+[sf-linkedin]: https://superface.ai/social-media/publish-post?provider=linkedin
 [projections]: https://learn.microsoft.com/en-us/linkedin/shared/api-guide/concepts/projections
-[ugcPosts]:
-[versioning]: https://learn.microsoft.com/en-us/linkedin/marketing/versioning?view=li-lms-2023-03
-[semver]:
+[ugcPosts]: https://learn.microsoft.com/en-us/linkedin/marketing/integrations/community-management/shares/ugc-post-api
+[versioning]: https://learn.microsoft.com/en-us/linkedin/marketing/versioning
+[semver]: https://semver.org/
