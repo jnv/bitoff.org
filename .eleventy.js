@@ -1,11 +1,10 @@
-const markdownItAnchor = require("markdown-it-anchor");
-
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 
 const addFilters = require("./src/filters");
 const addShortcodes = require("./src/shortcodes");
+const amendMarkdown = require("./src/markdown");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "./public/": "/" });
@@ -29,12 +28,9 @@ module.exports = function (eleventyConfig) {
     pluginRss.dateToRfc3339
   );
 
-  eleventyConfig.amendLibrary("md", (mdLib) => {
-    mdLib.use(markdownItAnchor, {
-      level: [1, 2, 3, 4],
-      slugify: eleventyConfig.getFilter("slug"),
-    });
-  });
+  eleventyConfig.amendLibrary("md", (mdLib) =>
+    amendMarkdown(mdLib, eleventyConfig)
+  );
 
   // Override @11ty/eleventy-dev-server defaults (used only with --serve)
   eleventyConfig.setServerOptions({
