@@ -2,6 +2,9 @@
 title: "LinkedIn's New Posts API: The Good, The Bad, and The Ugly"
 description: "The nice and not-so-nice parts of LinkedIn's new, versioned Content APIs."
 syntaxHighlighting: true
+discussion:
+  Dev.to: https://dev.to/jnv/linkedins-new-posts-api-the-good-the-bad-and-the-ugly-5e53
+  Twitter: https://twitter.com/janvlnas/status/1645814248201678848
 ---
 
 Last summer, LinkedIn [announced new API versioning][li-versioning-announcement] and plans to migrate existing API endpoints to the new versioning scheme along with some other improvements. The first set of endpoints to be migrated by LinkedIn were [Posts API][posts-api], responsible for working with users' and business profiles' posts.
