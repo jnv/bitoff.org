@@ -1,6 +1,8 @@
 ---
 title: "Exploring Pocket API: Authorization"
 description: "Dive into the Pocket's OAuth-but-not-quite authorization flow."
+discussion:
+  Dev.to: https://dev.to/jnv/exploring-pocket-api-authorization-2ogb
 ---
 
 I've been using [Pocket](https://getpocket.com/) for quite some time. Recently, I wanted to build something on top of their API. I've collected my notes and thoughts on Pocket API as a future reference for myself. Perhaps it will be useful to you.
