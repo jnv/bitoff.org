@@ -6,6 +6,7 @@ discussion:
   Twitter: https://twitter.com/janvlnas/status/1622729833426874369
   Mastodon: https://mastodon.social/@jnv/109827785367749581
   LinkedIn: https://www.linkedin.com/posts/janvlnas_is-twitter-api-free-activity-7027319567878115328-qZGY
+  Hashnode: https://jnv.hashnode.dev/is-twitter-api-free
 ---
 
 Last week, Twitter announced the end of free access to its public API. The announcement came [in a Tweet][announcement], a single week before the change, lacked any details about the pricing, and only [vaguely promised more information](https://twitter.com/TwitterDev/status/1621027418680229888).
