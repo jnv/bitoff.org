@@ -1,6 +1,10 @@
 ---
 title: "Is Twitter API Free? I've built a website to find out"
 description: "A single-serving site for checking the status of Twitter API paywall."
+discussion:
+  Dev.to: https://dev.to/jnv/is-twitter-api-free-ive-built-a-website-to-find-out-3hn4
+  Twitter: https://twitter.com/janvlnas/status/1622729833426874369
+  Mastodon: https://mastodon.social/@jnv/109827785367749581
 ---
 
 Last week, Twitter announced the end of free access to its public API. The announcement came [in a Tweet][announcement], a single week before the change, lacked any details about the pricing, and only [vaguely promised more information](https://twitter.com/TwitterDev/status/1621027418680229888).
