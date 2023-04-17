@@ -6,7 +6,12 @@ mainClass: h-entry
 
 {%- from "macros.njk" import postDate -%}
 <header class="post-header">
-  <h1 class="post-title p-name">{{ title }}</h1>
+  <hgroup>
+    <h1 class="post-title p-name">{{ title }}</h1>
+    {% if description -%}
+      <p class="p-summary post-description">{{ description }}</p>
+    {%- endif %}
+  </hgroup>
   {{ postDate(page) }}
 </header>
 <div class="e-content">
