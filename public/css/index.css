@@ -1,7 +1,7 @@
 /* Kudos https://www.robinrendle.com/notes/the-smallest-css/ */
 
 :root {
-  font-family: sans-serif;
+  font-family: system-ui, sans-serif;
   /* test it
   color-scheme: light dark;
   */
@@ -29,7 +29,7 @@ img {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 :where(code, kbd, samp, pre) {
-  font-family: monospace, monospace; /* 1 */
+  font-family: ui-monospace, monospace;
   font-size: 1em; /* 2 */
 }
 
