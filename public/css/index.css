@@ -1,10 +1,22 @@
 /* Kudos:
    https://www.robinrendle.com/notes/the-smallest-css/
    https://bt.ht/safari-default-dark-mode/
+   https://github.com/csstools/normalize.css
 */
 
-:root {
-  font-family: sans-serif;
+body {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70ch;
+  font: 107.5%/1.5 sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Fix for WebKit */
@@ -22,22 +34,6 @@
   }
 }
 
-body {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 70ch;
-  line-height: 1.35;
-  font-size: 115%;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 /**
  * From: https://github.com/csstools/normalize.css/blob/main/opinionated.css
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -46,10 +42,6 @@ img {
 :where(code, kbd, samp, pre) {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
-}
-
-pre code {
-  white-space: pre-wrap;
 }
 
 /* Direct Links / Markdown Headers */
@@ -130,7 +122,7 @@ figcaption p {
 /** Code **/
 pre {
   border: solid thin;
-  padding: 0.5rem;
+  padding: 0.5em;
   overflow-x: auto;
 }
 
