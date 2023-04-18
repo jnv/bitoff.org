@@ -1,10 +1,25 @@
-/* Kudos https://www.robinrendle.com/notes/the-smallest-css/ */
+/* Kudos:
+   https://www.robinrendle.com/notes/the-smallest-css/
+   https://bt.ht/safari-default-dark-mode/
+*/
 
 :root {
   font-family: sans-serif;
-  /* test it
-  color-scheme: light dark;
-  */
+}
+
+/* Fix for WebKit */
+@supports (color-scheme: dark light) {
+  @media screen and (prefers-color-scheme: dark) {
+    a:link {
+      color: #9e9eff;
+    }
+    a:visited {
+      color: #d0adf0;
+    }
+    a:active {
+      color: red;
+    }
+  }
 }
 
 body {
