@@ -126,3 +126,9 @@ figcaption p {
 .post-footer {
   margin-top: 2rem;
 }
+
+/** Code **/
+pre {
+  border: solid thin;
+  padding: 0.5rem;
+}

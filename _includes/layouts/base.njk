@@ -13,9 +13,6 @@
     <meta name="generator" content="{{ eleventy.generator }}" />
     <meta name="color-scheme" content="dark light" />
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}" />
-    {% if syntaxHighlighting -%}
-    <link rel="stylesheet" href="{{ '/css/prism.css' | url }}" />
-    {%- endif -%}
     <link rel="canonical" href="{{ canonical or absoluteUrl }}" />
     <link
       rel="alternate"
