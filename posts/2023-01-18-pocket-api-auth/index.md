@@ -21,11 +21,20 @@ My simple understanding of a typical OAuth 2.0 Authorization Code Flow is this:
 
 {#
 
-```mermaid
+```pintora
 sequenceDiagram
-    actor U as User
-    participant A as Consumer App
-    participant P as Provider
+  @config({
+      "themeConfig": {
+        "theme": "larkLight",
+        "themeVariables": {"canvasBackground": "#ffffff"}
+      },
+      "er": {
+        "edgeType": "ortho"
+      }
+    })
+    participant [<actor> U] as "User"
+    participant A as "Consumer App"
+    participant P as "Provider"
     U->>+A: I want to login with "Provider"
     activate U
     A-->>-U: Go to this URL
@@ -54,9 +63,18 @@ Pocket's authorization flow is a bit different:
 
 {#
 
-```mermaid
+```pintora
 sequenceDiagram
-    actor U as User
+    @config({
+      "themeConfig": {
+        "theme": "larkLight",
+        "themeVariables": {"canvasBackground": "#ffffff"}
+      },
+      "er": {
+        "edgeType": "ortho"
+      }
+    })
+    participant [<actor> U] as "User"
     participant A as Consumer App
     participant P as Provider
     U->>+A: I want to login with "Provider"
