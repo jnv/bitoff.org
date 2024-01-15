@@ -11,9 +11,26 @@ ${caption}
 </figure>`;
 }
 
+function figquote(content, caption, cite) {
+  const citeAttr = cite ? ` cite=${cite}` : "";
+
+  return `<figure class="figquote">
+<blockquote${citeAttr}>
+
+${content}
+
+</blockquote>
+<figcaption>
+
+—${caption}
+
+</figcaption>
+</figure>`;
+}
+
 function codesandbox(
   urlOrId,
-  { runonclick = 0, view = "preview", title = "", path, module }
+  { runonclick = 0, view = "preview", title = "", path, module },
 ) {
   let id = urlOrId;
   if (urlOrId.startsWith("https://")) {
@@ -43,5 +60,7 @@ function codesandbox(
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPairedShortcode("figure", figure);
+  eleventyConfig.addPairedShortcode("figquote", figquote);
+  eleventyConfig.addShortcode("img", imageShortcode);
   eleventyConfig.addShortcode("codesandbox", codesandbox);
 };

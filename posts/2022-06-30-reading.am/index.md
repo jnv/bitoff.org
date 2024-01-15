@@ -21,7 +21,7 @@ Reading homepage.
 
 Whenever I read something on the web, I used a bookmarklet (or extension, or email) to post the link to Reading.
 
-{% figure "overlay.png", 'A screenshot of a web page with Reading\'s overlay with "yep", "nope", and "share" buttons' %}
+{% figure "overlay.png", "A screenshot of a web page with Reading's overlay with “yep”, “nope”, and “share” buttons" %}
 Reading overlay on the page.
 {% endfigure %}
 
@@ -51,7 +51,22 @@ Maybe you experienced that _“oh yeah, I read about this”_ feeling, but could
 
 At the beginning of June, Reading's author [Greg Leppert](https://twitter.com/leppert) sent out an email about the Reading sunset.
 
-<blockquote class="twitter-tweet" data-lang="en" data-dnt="true" data-align="center"><p lang="en" dir="ltr">I’m sunsetting <a href="https://t.co/YUmTL4bUkI">https://t.co/YUmTL4bUkI</a> at the end of this month. Thanks to everyone who participated—I really enjoyed building things with and for you. Data exports are available and I’ll be around for support and questions. —<a href="https://twitter.com/leppert?ref_src=twsrc%5Etfw">@leppert</a> <a href="https://t.co/uaVehWBflK">pic.twitter.com/uaVehWBflK</a></p>&mdash; Reading (@reading) <a href="https://twitter.com/reading/status/1532360247779676161?ref_src=twsrc%5Etfw">June 2, 2022</a></blockquote>
+{% figquote "[Tweet from @reading](https://twitter.com/reading/status/1532360247779676161), June 2, 2022", "https://twitter.com/reading/status/1532360247779676161" %}
+I’m sunsetting Reading.am at the end of this month. Thanks to everyone who participated—I really enjoyed building things with and for you. Data exports are available and I’ll be around for support and questions. —[@leppert](https://twitter.com/leppert)
+
+> You're receiving this email because, at some point in the last decade, a Reading.am account was created using this address. Apologies, but I'm closing up shop at the end of this month and will take the site offline, permanently, at 11:59pm ET on June 30th, 2022.
+>
+> If you'd like to download your bookmarks, you can do so in HTML, CSV, and JSON formats […]
+>
+> If you have any difficulty logging in or downloading that data, please do let me know in the next couple of weeks and I'll make time to troubleshoot.
+>
+> Reading was always a labor of love and I want to thank you for being a part of it. If you're curious about what I'll be up to in the future, you can follow me here: <https://twitter.com/leppert>
+>
+> And, as always, you can respond directly to this email; I'd love to hear from you.
+>
+> —Greg
+
+{% endfigquote %}
 
 I don't think it came as a surprise to the remaining Reading users. There were no new features since 2016 and every so often, the site was unavailable for multiple days.
 
@@ -59,7 +74,9 @@ Despite all of this, Reading didn't end up like most abandoned communities, coll
 
 Reading was a single person project and labor of love. I am grateful to Greg for building this small, but invigorating this community, and it was fun to be part of it.
 
-<blockquote class="twitter-tweet" data-lang="en" data-dnt="true" data-align="center"><p lang="en" dir="ltr">In light of Icebergs shutting down, this is a reminder that Reading is run by a single person who pays for the servers because he likes you.</p>&mdash; Reading (@reading) <a href="https://twitter.com/reading/status/494551445291532288?ref_src=twsrc%5Etfw">July 30, 2014</a></blockquote>
+{% figquote "[Tweet from @reading](https://twitter.com/reading/status/494551445291532288), July 30, 2014", "https://twitter.com/reading/status/494551445291532288" %}
+In light of Icebergs shutting down, this is a reminder that Reading is run by a single person who pays for the servers because he likes you.
+{% endfigquote %}
 
 ## What's next?
 
@@ -68,8 +85,8 @@ not shoved in their face through a guided tutorial.
 
 Maybe you think: “I could build Reading in one weekend!” — and I'd believe you. More power to you! Greg even published the [source code](https://github.com/reading-am/reading) for Reading. Will you pick up the torch?
 
-<blockquote class="twitter-tweet" data-lang="en" data-dnt="true" data-cards="hidden" data-align="center"><p lang="en" dir="ltr">In light of <a href="https://twitter.com/reading?ref_src=twsrc%5Etfw">@reading</a>&#39;s coming sunset, a few kind users convinced me to finally open source (MIT) the code. Everything is showing its age, but then again aren&#39;t we all. Have a look: <a href="https://t.co/OY0ibqIhjs">https://t.co/OY0ibqIhjs</a></p>&mdash; Greg Leppert (@leppert) <a href="https://twitter.com/leppert/status/1533833437366345728?ref_src=twsrc%5Etfw">June 6, 2022</a></blockquote>
+{% figquote "[Tweet from @leppert (archive)](https://web.archive.org/web/20220829070123/https://twitter.com/leppert/status/1533833437366345728), June 6, 2022", "https://twitter.com/leppert/status/1533833437366345728" %}
+In light of @reading's coming sunset, a few kind users convinced me to finally open source (MIT) the code. Everything is showing its age, but then again aren't we all. Have a look: <https://github.com/reading-am/>
+{% endfigquote %}
 
 As for me, Reading's sunset inspired me to start a summer project to scratch my itch. Stay tuned!
-
-<script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

@@ -95,6 +95,15 @@ figcaption p {
   margin-top: 0.5rem;
 }
 
+.figquote {
+  margin: 2em 0;
+}
+blockquote {
+  border-left: solid medium;
+  margin: 0;
+  padding: 0 1.5em;
+}
+
 .site-footer {
   margin-top: 3rem;
 }
