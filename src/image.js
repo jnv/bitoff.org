@@ -1,5 +1,5 @@
 const path = require("path");
-const Image = require("@11ty/eleventy-img");
+const eleventyImage = require("@11ty/eleventy-img");
 
 const WIDTHS = [720, null];
 
@@ -9,19 +9,12 @@ function getExt(src) {
 }
 
 function extToOptions(ext) {
-  switch (ext) {
-    case "jpeg":
-      return { formats: ["webp", "jpeg"] };
-    case "png":
-      return {
-        formats: ["webp", "png"],
-        sharpWebpOptions: {
-          nearLossless: true,
-        },
-      };
-    default:
-      return { formats: [null] };
+  if (ext === "png") {
+    return {
+      sharpWebpOptions: { nearLossless: true },
+    };
   }
+  return {};
 }
 
 function getSizes(largestWidth) {
@@ -38,6 +31,7 @@ function imageShortcode(src, alt = "") {
     svgShortCircuit: true,
     outputDir: "./_site/img/generated",
     urlPath: "/img/generated/",
+    formats: ["webp", "auto"],
     widths: WIDTHS,
     ...extToOptions(srcExt),
   };
@@ -46,20 +40,19 @@ function imageShortcode(src, alt = "") {
   const fileSrc = path.join(".", path.dirname(this.page.inputPath), src);
 
   // generate images, while this is async we don’t wait
-  Image(fileSrc, options);
+  eleventyImage(fileSrc, options);
 
   // get metadata even the images are not fully generated
-  const metadata = Image.statsSync(fileSrc, options);
+  const metadata = eleventyImage.statsSync(fileSrc, options);
 
   const originalFile = metadata[srcExt].at(-1);
   const originalWidth = originalFile.width;
   const imageAttributes = {
     alt,
-    loading: "lazy",
     decoding: "async",
     sizes: getSizes(originalWidth),
   };
-  const imageHtml = Image.generateHTML(metadata, imageAttributes, {
+  const imageHtml = eleventyImage.generateHTML(metadata, imageAttributes, {
     whitespaceMode: "inline",
   });
 

@@ -2,8 +2,8 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 
-const addFilters = require("./src/filters");
-const addShortcodes = require("./src/shortcodes");
+const pluginFilters = require("./src/filters");
+const pluginShortcodes = require("./src/shortcodes");
 const amendMarkdown = require("./src/markdown");
 const pluginDrafts = require("./src/drafts");
 
@@ -16,9 +16,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginNavigation);
 
   eleventyConfig.addPlugin(pluginDrafts);
-
-  addFilters(eleventyConfig);
-  addShortcodes(eleventyConfig);
+  eleventyConfig.addPlugin(pluginFilters);
+  eleventyConfig.addPlugin(pluginShortcodes);
 
   // For JSON feed
   eleventyConfig.addJavaScriptFunction("absoluteUrl", pluginRss.absoluteUrl);
