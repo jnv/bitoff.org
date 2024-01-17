@@ -5,6 +5,7 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const addFilters = require("./src/filters");
 const addShortcodes = require("./src/shortcodes");
 const amendMarkdown = require("./src/markdown");
+const pluginDrafts = require("./src/drafts");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "./public/": "/" });
@@ -14,6 +15,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
 
+  eleventyConfig.addPlugin(pluginDrafts);
+
   addFilters(eleventyConfig);
   addShortcodes(eleventyConfig);
 
@@ -21,15 +24,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addJavaScriptFunction("absoluteUrl", pluginRss.absoluteUrl);
   eleventyConfig.addJavaScriptFunction(
     "htmlToAbsoluteUrls",
-    pluginRss.convertHtmlToAbsoluteUrls
+    pluginRss.convertHtmlToAbsoluteUrls,
   );
   eleventyConfig.addJavaScriptFunction(
     "dateToRfc3339",
-    pluginRss.dateToRfc3339
+    pluginRss.dateToRfc3339,
   );
 
   eleventyConfig.amendLibrary("md", (mdLib) =>
-    amendMarkdown(mdLib, eleventyConfig)
+    amendMarkdown(mdLib, eleventyConfig),
   );
 
   // Override @11ty/eleventy-dev-server defaults (used only with --serve)
