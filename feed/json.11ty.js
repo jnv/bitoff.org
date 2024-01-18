@@ -2,6 +2,9 @@
 module.exports.data = {
   permalink: ({ metadata }) => metadata.jsonfeed.path,
   eleventyExcludeFromCollections: true,
+  eleventyImport: {
+    collections: ["posts"],
+  },
 };
 
 module.exports.render = async function (data) {
@@ -31,7 +34,7 @@ module.exports.render = async function (data) {
       date_published: this.dateToRfc3339(post.date),
       content_html: await this.htmlToAbsoluteUrls(
         post.templateContent,
-        absolutePostUrl
+        absolutePostUrl,
       ),
     };
     feed.items.push(item);
