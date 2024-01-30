@@ -95,3 +95,8 @@ title: "Resources for the talk The Web We've (Never) Lost"
   - https://www.slowweb.io/
   - https://indieweb.org/slow_web
 - [SmolNet](https://communitywiki.org/wiki/SmolNet)
+
+## Follow up
+
+- [Reach out to me](https://jan.vlnas.cz/)
+- [See me on WebExpo 2024](https://webexpo.net/sessions/lets-dive-into-activitypub-protocol-for-the-social-web-and-beyond/) (use code `VLNAS` during checkout for 20% off conference tickets)
