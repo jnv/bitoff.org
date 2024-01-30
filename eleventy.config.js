@@ -1,6 +1,7 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
+const markdownIt = require("markdown-it");
 
 const pluginFilters = require("./src/filters");
 const pluginShortcodes = require("./src/shortcodes");
@@ -30,6 +31,12 @@ module.exports = function (eleventyConfig) {
     pluginRss.dateToRfc3339,
   );
 
+  const mdOptions = {
+    html: true,
+    linkify: true,
+  };
+
+  eleventyConfig.setLibrary("md", markdownIt(mdOptions));
   eleventyConfig.amendLibrary("md", (mdLib) =>
     amendMarkdown(mdLib, eleventyConfig),
   );
