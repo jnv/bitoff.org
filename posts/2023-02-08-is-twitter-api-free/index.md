@@ -9,11 +9,17 @@ discussion:
   Hashnode: https://jnv.hashnode.dev/is-twitter-api-free
 ---
 
+<aside>
+
+<ins datetime="2024-02-02">Updated on February 2nd, 2024: Project's domain has expired. You can find the final archived version from June 2023 [on GitHub Pages][istwitterapifree] and previous versions using [Wayback Machine](https://web.archive.org/web/20230201000000*/https://istwitterapifree.com/).</ins>
+
+</aside>
+
 Last week, Twitter announced the end of free access to its public API. The announcement came [in a Tweet][announcement], a single week before the change, lacked any details about the pricing, and only [vaguely promised more information](https://twitter.com/TwitterDev/status/1621027418680229888).
 
 Today is February 8th, one day before the announced deadline. No further information was provided on the TwitterDev account, community forums, or developer newsletter. Only more vague promises of a free “write-only API for bots providing good content” in a [reply tweet](https://twitter.com/elonmusk/status/1622082025166442505) by Mr. “Chief Twit” himself.
 
-To help fellow developers, I've made a website to provide a definitive answer to the question: [**Is Twitter API Free?**](https://istwitterapifree.com/)
+To help fellow developers, I've made a website to provide a definitive answer to the question: [**Is Twitter API Free?**][istwitterapifree]
 
 ## A single-serving site
 
@@ -43,7 +49,7 @@ I'm also curious about how many visitors my silly site gets. [Goat Counter](http
 
 The site wouldn't be complete without a [Twitter bot](https://twitter.com/IsTwApiFree) and a [Mastodon bot](https://masto.ai/@istwitterapifree) (of course). I wanted to avoid implementing the posting logic, so I used the most unappreciated technology on the web: the good old RSS feed (well, technically an Atom feed).
 
-The site generator creates a [feed with a single entry](https://istwitterapifree.com/feed.xml). The entry is identified by the current date, so feed readers will display a new item at most once a day, regardless of how many times the site is regenerated.
+The site generator creates a [feed with a single entry](https://jnv.github.io/istwitterapifree.com/feed.xml). The entry is identified by the current date, so feed readers will display a new item at most once a day, regardless of how many times the site is regenerated.
 
 This feed is passed to automation. For Twitter, I've used <acronym title="If This Then That">IFTTT</acronym> to post a new feed item to the Twitter account. I assume that a larger provider like IFTTT already pays for Twitter API, so it won't be affected.
 
@@ -88,9 +94,10 @@ While the manipulation with dates is still painful, Intl APIs simplify at least 
 
 ## What's next
 
-My hope for the [Is Twitter API Free?](https://istwitterapifree.com/) site is that it becomes irrelevant in a few weeks. I might add some recommendations for developers who stumble upon the site, like resources for building ActivityPub bots or scraping Twitter's private API. No matter whether Twitter implements the API paywall in the end, or retracts the plan, it has already lost any remaining credibility as a platform for developers. It's time to move on.
+My hope for the [Is Twitter API Free?][istwitterapifree] site is that it becomes irrelevant in a few weeks. I might add some recommendations for developers who stumble upon the site, like resources for building ActivityPub bots or scraping Twitter's private API. No matter whether Twitter implements the API paywall in the end, or retracts the plan, it has already lost any remaining credibility as a platform for developers. It's time to move on.
 
-Meanwhile, keep checking [the site](https://istwitterapifree.com/), follow the [Twitter bot](https://twitter.com/IsTwApiFree) or the [Mastodon bot](https://masto.ai/@istwitterapifree), and check the [site's source][source].
+Meanwhile, keep checking [the site][istwitterapifree], follow the [Twitter bot](https://twitter.com/IsTwApiFree) or the [Mastodon bot](https://masto.ai/@istwitterapifree), and check the [site's source][source].
 
+[istwitterapifree]: https://jnv.github.io/istwitterapifree.com/
 [announcement]: https://twitter.com/TwitterDev/status/1621026986784337922
 [source]: https://github.com/jnv/istwitterapifree.com
