@@ -18,7 +18,6 @@ title: "Resources for the talk Dive into the ActivityPub"
 - [Twitterific](https://twitterrific.com/beyond)
 - [Ivory for Mastodon](https://tapbots.com/ivory/)
 - [Project Tapestry](https://www.kickstarter.com/projects/iconfactory/project-tapestry)
-
 - [On Distributed Communication Networks](https://www.rand.org/content/dam/rand/pubs/papers/2005/P2626.pdf), pp. 4 (PDF)
 - [Evan Prodromou](https://www.threads.net/@evanprodromou/post/C5dqW7irXytPoSwWJ3zNAstY86MjFbeObwvPf40)
 - [Why publishers are preparing to federate their sites](https://digiday.com/media/why-publishers-are-preparing-to-federate-their-sites/)
