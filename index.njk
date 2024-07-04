@@ -9,26 +9,25 @@ eleventyNavigation:
 <p class="home-intro">
   <strong>bit off</strong>
   is an occassional weblog written by
-  <a href="https://jan.vlnas.cz">Jan Vlnas</a>.
+  <a href="{{ metadata.author.url }}" rel="author">{{ metadata.author.name }}</a>.
 </p>
-<ul class="postlist">
-  {% for post in collections.posts | reverse %}
-    <li class="postlist-item h-entry" role="article">
-      <header>
-        <h2 class="p-name">
-          <a href="{{ post.url | url }}" class="u-url u-uid">
-            {% if post.data.title -%}
-              {{ post.data.title }}
-            {%- else -%}
-              <code>{{ post.url }}</code>
-            {%- endif %}
-          </a>
-        </h2>
-        {{ postDate(post) }}
-      </header>
-      {% if post.data.description -%}
-        <p class="p-summary postlist-description">{{ post.data.description }}</p>
-      {%- endif %}
-    </li>
-  {% endfor %}
-</ul>
+
+{% for post in collections.posts | reverse %}
+  <article class="postlist-item h-entry">
+    <header>
+      <h2 class="p-name">
+        <a href="{{ post.url | url }}" class="u-url u-uid">
+          {% if post.data.title -%}
+            {{ post.data.title }}
+          {%- else -%}
+            <code>{{ post.url }}</code>
+          {%- endif %}
+        </a>
+      </h2>
+      {{ postDate(post) }}
+    </header>
+    {% if post.data.description -%}
+      <p class="p-summary postlist-description">{{ post.data.description }}</p>
+    {%- endif %}
+  </article>
+{% endfor %}
