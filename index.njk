@@ -1,16 +1,22 @@
 ---
 layout: layouts/home.njk
+mainClass: h-feed
 eleventyNavigation:
   key: "bit off"
   order: 1
 ---
 
 {%- from "macros.njk" import postDate -%}
-<p class="home-intro">
-  <strong>bit off</strong>
-  is an occassional weblog written by
-  <a href="{{ metadata.author.url }}" rel="author">{{ metadata.author.name }}</a>.
-</p>
+<header>
+  <h1 class="h-name">bit off</h1>
+  <p>
+    <span class="p-summary">{{ metadata.description }}</span>
+    <span>
+      Written by
+      <a href="{{ metadata.author.url }}" class="p-author h-card" rel="author">{{ metadata.author.name }}</a>.
+    </span>
+  </p>
+</header>
 
 {% for post in collections.posts | reverse %}
   <article class="postlist-item h-entry">
