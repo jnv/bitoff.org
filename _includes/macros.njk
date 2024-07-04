@@ -1,6 +1,9 @@
-{% macro postDate(post) -%}
+{% macro postDate(post, author) -%}
   <p class="post-published">
-    Published on
+    Posted on
     <time class="dt-published" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+    {%- if author %}
+      by <a href="{{ author.url }}" class="p-author" rel="author">{{ author.name }}</a>
+    {%- endif -%}
   </p>
 {%- endmacro %}

@@ -12,7 +12,7 @@ mainClass: h-entry
       <p class="p-summary post-description">{{ description }}</p>
     {%- endif %}
   </hgroup>
-  {{ postDate(page) }}
+  {{ postDate(page, metadata.author) }}
 </header>
 <div class="e-content">
   {{ content | safe }}
