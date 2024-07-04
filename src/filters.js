@@ -10,7 +10,7 @@ const listFormatter = new Intl.ListFormat("en", {
 
 function linkifyMap(obj = {}) {
   const links = Object.entries(obj).map(([site, url]) => {
-    return `<a href="${url}">${site}</a>`;
+    return `<a href="${url}" class="u-syndication">${site}</a>`;
   });
 
   return listFormatter.format(links);
