@@ -23,9 +23,7 @@ mainClass: h-entry
     If you have any feedback, comments, or corrections on this post, <a href="mailto:{{ metadata.author.email }}?subject={{ title | urlencode }}">send me an email</a>.
   </p>
   {% if discussion %}
-  <p>
-    You can also discuss this post on {{ discussion | linkifyMap | safe }}.
-  </p>
+    <p>You can also discuss this post on {{ discussion | linkifyMap | safe }}.</p>
   {% endif %}
 </aside>
 {#
