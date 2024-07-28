@@ -17,7 +17,7 @@ Abstract:
 
 I’m Jan and I work as an engineer with the API team at Mews. While I went through many roles in my career, they all have one thing in common: I’m always building something for the web.
 
-I do like web. Not just like a development platform, but as a medium and as a cultural artifact. And in this talk, I want to show you why we should pay more attention to the web in its own right. Particularly this year.
+I do like web. Not just like a development platform, but as a medium and as a cultural artifact. And in my talk, I want to show you why we should pay more attention to the web in its own right. Particularly this year.
 
 Let me start with two questions:
 
@@ -69,23 +69,25 @@ Photo from Politico: [AI hearing leaves Washington with 3 big questions](https:/
 
 {% endfigure %}
 
-Now, let’s add this guy to the mix. For those that don’t know, Sam Altman is CEO of OpenAI. While GPT has been available for a while now, ChatGPT was released in fall of 2022 and to this day we’re still trying to grasp the consequences of widely available generative Large Language Models.
+Now, let’s add that guy to the mix. For those that don’t know, Sam Altman is CEO of OpenAI. While GPT has been available for a while now, ChatGPT was released in fall of 2022 and to this day we’re still trying to grasp the consequences of widely available generative Large Language Models (LLMs).
 
-And since LLMs are trained on data from the web, they’re really good at generating plausibly looking articles.
+Since LLMs are trained on data from the web, they’re really good at generating plausibly looking articles.
 
 {% figure "slide12.png", "Screenshot of twitter thread by user MackGrenfell: “Just pulled off a bit of an SEO heist using GPT-3, creating 1,800 articles around a competitor brand's main pages by scraping their sitemap. Here's how it went: 1) Find a competitor who ranks for all the sorts of terms you want to rank for, and look at their sitemap. You'll want them to have URLs which are broadly descriptive of what the content at that URL is. …”" %}
 [Source tweets](https://twitter.com/MackGrenfell/status/1514557363902205952)
 {% endfigure %}
 
-Growth hackers like this guy love this. Generate thousands of articles based on the competitor’s website structure? No problem.
+Growth hackers like this guy love ChatGPT. Generate thousands of articles based on the competitor’s website structure? No problem.
 
-So how does Google deals with this AI-generated content?
+So how does Google deals with AI-generated content?
 
 {% figure "slide13.png", "Headline of article from Futurism: AI Garbage Is Destroying Google Results; “It’s the worst quality results on Google I’ve seen in my 14-year career.”" %}
 [Source article](https://futurism.com/ai-garbage-destroying-google-results)
 {% endfigure %}
 
 Not well.
+
+<hr>
 
 {% figure "slide14.png", "Old photo of Elon Musk from 2000 holding a Visa card with “x.com” logo in front of camera, CRT monitor with PayPal logo in his background." %}
 [Source article (archive)](https://web.archive.org/web/20221224182438/https://finance.yahoo.com/news/elon-musk-makes-spends-billions-200625424.html)
@@ -108,9 +110,9 @@ And there is an underlying theme to this all.
 
 ### Enshittification
 
-Have you heard about this word? _Only a handful of people raised their hand._
+Have you heard about **enshittification**? _Only a handful of people raised their hand._
 
-You should, [it was named the word of year 2023](https://americandialect.org/2023-word-of-the-year-is-enshittification/).
+It was [named the word of year 2023](https://americandialect.org/2023-word-of-the-year-is-enshittification/).
 
 Enshittification is a term [coined by Cory Doctorow](https://pluralistic.net/2023/01/21/potemkin-ai/#hey-guys) to explain the dynamics of online platforms:
 
@@ -128,13 +130,13 @@ We see this playing out with [Amazon](https://pluralistic.net/2022/11/28/enshitt
 
 {% endfigure %}
 
-Matthew Inman, aka The Oatmeal [captured this phenomenon][oatmeal] much earlier before it had name.
+Matthew Inman, aka The Oatmeal [captured the phenomenon of enshittification][oatmeal] before it even had name.
 
-Circa 15 years ago, Facebook was this hip place where following friends and pages was convenient. But once we’ve got accustomed to the algorithmic newsfeed, Facebook started to push more advertising on us – and also pushed content producers to pay for ads. It’s sort of inevitable trajectory of platforms which act as an intermediary between the users and businesses, because they control both sides.
+Circa 15 years ago, Facebook was a hip place where following friends and pages was convenient. But once we’ve got accustomed to the algorithmic newsfeed, Facebook started to push more advertising on us – and also pushed content producers to pay for ads. It’s sort of inevitable trajectory of platforms which act as an intermediary between the users and businesses, because they control both sides.
 
 {% img "slide24.png", "Drake Hotline Bling meme with Drake rejecting the Twitter's blue bird with X for its eyes and embracing logo of Threads by Meta." %}
 
-And we see this enshittification cycle to start anew, with many Twitter users moving to Threads by Meta. I don’t see where this could go wrong.
+And we see the enshittification cycle to start anew, with many Twitter users moving to Threads by Meta. I don’t see where this could go wrong.
 
 **Can we break the enshittification cycle?** Are we doomed to move from one platform to another, always becoming a hostage in some grand enshittification scheme? Or is there something else?
 
@@ -159,7 +161,7 @@ The **peripheral web** can be described as the outskirts of the core web, with p
 {% endfigquote %}
 
 {% figure "slide30.jpg", "An illustration visibly generated by text-to-image model, depicting a city of skyscrapers with familiar corporation logos like Facebook, Amazon, and Twitter. The city is surrounded by lake and green hills with small cottages." %}
-“\[The core web] is the digital countryside of the corporate megalopolis.” (generated with DALL·E 3)
+“\[The peripheral web] is the digital countryside of the corporate megalopolis.” (generated with DALL·E 3)
 {% endfigure %}
 
 But beside “peripheral web” there are different names for this idea, like:
@@ -214,12 +216,12 @@ While social media became synonymous with Facebook and few other, large, ad-driv
 One of the original, truly web-native communities, were GeoCities, a free hosting which was home to websites for various niches. Since 2009 we can only experience [GeoCities in its archived form](https://blog.archive.org/2009/08/25/GeoCities-preserved/), but [Neocities](https://neocities.org/) picked up the torch.
 
 {% figure "slide45.png", "Screenshot of website Gifypet with introduction text: “Hello sir/madam, Did you dream of your very own pet? Who is there to watch over your site when you are gone? GifyPet will! This little friend will welcome your guests and love you forever! Best Regards, GifyPet Adoption Center”" %}
-[Gifypets](https://gifypet.neocities.org/), one of the featured Neocities site. It lets you build your own pet you can put on your site and other visitors can interact with it.
+[GifyPets](https://gifypet.neocities.org/), one of the featured Neocities site. It lets you build your own pet you can put on your site and other visitors can interact with it.
 {% endfigure %}
 
 For more advanced users there is [Glitch](https://glitch.com/), “the friendly place where everyone builds the web”. Beside static websites it also supports Node.js. While it’s similar to Replit or CodeSandbox, Glitch focuses on community and creative aspects of coding. For example, Stefan Bohacek [hosts hist social media bots](https://stefans-creative-bots.glitch.me/) on Glitch. You can go straight to the editor, “remix” the project and create a bot of your own.
 
-Maybe you heard about MySpace, or even experienced it. Unlike today’s social media, MySpace allowed users to fully customize their profiles using custom CSS and HTML. This feature, which was originally a bug, lead to the notorious busy, tasteless user profiles with autoplaying music. While you may sneer at this today, keep in mind that MySpace [introduced raised a whole generation of web developers](https://www.codecademy.com/resources/blog/myspace-and-the-coding-legacy/) – many people were exposed to programming thanks to MySpace’s fortunate bug. And it’s where [SpaceHey](https://spacehey.com/) aims to be MySpace’s successor, a “retro social network” which allows users to fully modify their profiles.
+Maybe you heard about MySpace, or even experienced it. Unlike today’s social media, MySpace allowed users to fully customize their profiles using custom CSS and HTML. This feature, which was originally a bug, lead to the notorious busy, tasteless user profiles with autoplaying music. While you may sneer at MySpace today, keep in mind that it [raised a whole generation of web developers](https://www.codecademy.com/resources/blog/myspace-and-the-coding-legacy/) – many people were exposed to programming thanks to MySpace’s fortunate bug. And it’s where [SpaceHey](https://spacehey.com/) aims to be MySpace’s successor, a “retro social network” which allows users to fully modify their profiles.
 
 {% figure "slide50.png", "SpaceHey profile of user _n_0r_a, with loud red colors and multitude of animated GIFs." %}
 Example of profile customization on SpaceHey ([check it out](https://spacehey.com/profile?id=2453593) to fully appreciate the animations and custom cursor).
@@ -256,20 +258,20 @@ While you’re reading interesting content, you may as well collect it and share
 If you prefer something more social or simpler for maintenance, there’s for example [Are.na](https://www.are.na/), which lets you curate images and text into various channels. Yes, it’s sort of like Pinterest but without crap.
 
 {% figure "slide58.png", "SpaceHey profile of user _n_0r_a, with loud red colors and multitude of animated GIFs." %}
-One of my favorite Are.na channels is this [collection of fruit crate labels](https://www.are.na/kyle-levy/fruit-crate-labels).
+One of my favorite Are.na channels is the [collection of fruit crate labels](https://www.are.na/kyle-levy/fruit-crate-labels).
 {% endfigure %}
 
 #### Create
 
-Finally, all this inspiration hopefully gives you an itch to create something on the web yourself.
+Perhaps you now have an itch to create something on the web yourself.
 
 Make yourself a homepage which shows your personality, or at least contact details. It can be complex and playful as [nuel’s](https://nuel.pw/), or extremely simple and boring [as mine](https://jan.vlnas.cz/).
 
 Create a [single-serving site](https://en.wikipedia.org/wiki/Single-serving_site). Just to give you a few examples:
 
-- This one asks [Is it friday yet?](http://isitfridayyet.net/)
+- This one asks [Is it Friday yet?](http://isitfridayyet.net/)
 - This one [makes everything OK](https://make-everything-ok.com/)
-- Czechs and Slovaks probably know <a href="http://milujipraci.cz/" hreflang="cs" lang="cs">Miluji práci</a> (I love my job); it’s actually <acronym title="not safe for work">NSFW</acronym> soundboard
+- Czechs and Slovaks probably know <a href="http://milujipraci.cz/" hreflang="cs" lang="cs">Miluji práci</a> (I love my job); it’s actually very <acronym title="not safe for work">NSFW</acronym> soundboard
 
 Last year I also made a single-serving site of my own to [track whether Twitter’s API is free](/is-twitter-api-free/). It didn’t become a viral sensation but it was fun to build. I let the domain expire, but the page is [archived on GitHub](https://jnv.github.io/istwitterapifree.com/).
 
@@ -282,7 +284,7 @@ If you want to start or return to blogging, I particularly like the advice to [t
 
 For more options, check out [list of blogging platforms from Jason Velazquez](https://micro.fromjason.xyz/2024/01/06/blogging-platforms.html).
 
-And if you decide to go this route, Jason Kottke has a message for you:
+And if you decide to (re)start blogging, Jason Kottke has a message for you:
 
 {% figquote "[Tweet from Jason Kottke](https://twitter.com/jkottke/status/505405730367627264), August 29, 2014", "https://twitter.com/jkottke/status/505405730367627264" %}
 Oh you’re blogging again? Cute. WELCOME BACK MOTHERFUCKERS.
@@ -290,7 +292,7 @@ Oh you’re blogging again? Cute. WELCOME BACK MOTHERFUCKERS.
 
 ### Wrap up
 
-I want to end up with this quote from Tim Berners-Lee:
+I want to end with quote from Tim Berners-Lee:
 
 {% figquote "[Tim Berners-Lee: Answers for Young People](https://www.w3.org/People/Berners-Lee/Kids.html)", "https://www.w3.org/People/Berners-Lee/Kids.html#:~:text=So%20what%20is%20made%20of%20the,to%20help%20people%20understand%20each%20other." %}
 What is made of the Web is up to us. You, me, and everyone else. […]
@@ -378,7 +380,7 @@ Let’s create some new, exciting things on the web, for the web.
 - [Where have all the flowers gone?](https://daverupert.com/2024/01/where-have-all-the-websites-gone/) by Dave Rupert (reply to Jason’s post)
 - [The Internet Is About to Get Weird Again](https://www.rollingstone.com/culture/culture-commentary/internet-future-about-to-get-weird-1234938403/) by Anil Dash
 - [Why the Internet Isn’t Fun Anymore](https://www.newyorker.com/culture/infinite-scroll/why-the-internet-isnt-fun-anymore) by Kyle Chayka
-- [The Web Is Fucked](https://thewebisfucked.com/)
+- [The Web Is Fucked](https://thewebisfucked.com/) (contains strong language)
 
 #### Indie web, Small web et al.
 
