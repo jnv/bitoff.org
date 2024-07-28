@@ -5,7 +5,7 @@ description: 'Based on my talk for PragueJS meetup from February 2024'
 
 This text is partially a transcript, partially a recollection of a talk I presented on the [PragueJS meetup](https://www.meetup.com/praguejs/) in February 2024.[^recording]
 
-[^recording]: There's also a [recording](https://www.youtube.com/watch?v=0uURChbvhVY) if you really want, but it's, ummm, not very good. It’s definitely not my best performances.
+[^recording]: There's also a [recording](https://www.youtube.com/watch?v=0uURChbvhVY) if you really want, but it's, ummm, not very good. It’s definitely not my best performance.
 
 Abstract:
 
