@@ -120,7 +120,7 @@ Enshittification is a term [coined by Cory Doctorow](https://pluralistic.net/202
 Here is how platforms die: first, they are good to their users; then they abuse their users to make things better for their business customers; finally, they abuse those business customers to claw back all the value for themselves. Then, they die.
 {% endfigquote %}
 
-We see this playing out with [Amazon](https://pluralistic.net/2022/11/28/enshittification/#relentless-payola), [TikTok][doctorow_tiktok], [Reddit](https://www.motherjones.com/politics/2023/06/reddit-blackout/), but also with [Uber](https://www.prospectmagazine.co.uk/ideas/technology/63324/how-weve-enshittified-the-tech-economy) and [AirBnB](https://jacobin.com/2024/01/airbnb-big-tech-hotels-travel-sharing-economy-capitalism).[^wikiensh] But the prime example is Facebook
+We see this playing out with [Amazon](https://pluralistic.net/2022/11/28/enshittification/#relentless-payola), [TikTok][doctorow_tiktok], [Reddit](https://www.motherjones.com/politics/2023/06/reddit-blackout/), but also with [Uber](https://www.prospectmagazine.co.uk/ideas/technology/63324/how-weve-enshittified-the-tech-economy) and [AirBnB](https://jacobin.com/2024/01/airbnb-big-tech-hotels-travel-sharing-economy-capitalism).[^wikiensh] But the prime example is Facebook.
 
 [^wikiensh]: Wikipedia helpfully provides [more examples](https://en.wikipedia.org/w/index.php?title=Enshittification&oldid=1236451329#Examples).
 
