@@ -1,4 +1,4 @@
-const { DateTime } = require("luxon");
+import { DateTime } from "luxon";
 
 const createDateFormat = (format) => (dateObj) =>
   DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(format);
@@ -16,7 +16,7 @@ function linkifyMap(obj = {}) {
   return listFormatter.format(links);
 }
 
-module.exports = (eleventyConfig) => {
+export default (eleventyConfig) => {
   eleventyConfig.addFilter("readableDate", createDateFormat("DDD"));
   eleventyConfig.addFilter("shortDate", createDateFormat("MMM yyyy"));
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string

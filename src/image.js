@@ -1,10 +1,10 @@
-const path = require("path");
-const eleventyImage = require("@11ty/eleventy-img");
+import { extname, join, dirname } from "path";
+import eleventyImage, { statsSync, generateHTML } from "@11ty/eleventy-img";
 
 const WIDTHS = [720, null];
 
 function getExt(src) {
-  const ext = path.extname(src).substring(1);
+  const ext = extname(src).substring(1);
   return ext === "jpg" ? "jpeg" : ext;
 }
 
@@ -25,7 +25,7 @@ function getSizes(largestWidth) {
   return sizes.join(",");
 }
 
-function imageShortcode(src, alt = "") {
+export function imageShortcode(src, alt = "") {
   const srcExt = getExt(src);
   const options = {
     svgShortCircuit: true,
@@ -37,13 +37,13 @@ function imageShortcode(src, alt = "") {
   };
 
   // https://gfscott.com/blog/eleventy-img-without-central-image-directory/#the-solution
-  const fileSrc = path.join(".", path.dirname(this.page.inputPath), src);
+  const fileSrc = join(".", dirname(this.page.inputPath), src);
 
   // generate images, while this is async we don’t wait
   eleventyImage(fileSrc, options);
 
   // get metadata even the images are not fully generated
-  const metadata = eleventyImage.statsSync(fileSrc, options);
+  const metadata = statsSync(fileSrc, options);
 
   const originalFile = metadata[srcExt].at(-1);
   const originalWidth = originalFile.width;
@@ -52,7 +52,7 @@ function imageShortcode(src, alt = "") {
     decoding: "async",
     sizes: getSizes(originalWidth),
   };
-  const imageHtml = eleventyImage.generateHTML(metadata, imageAttributes, {
+  const imageHtml = generateHTML(metadata, imageAttributes, {
     whitespaceMode: "inline",
   });
 
@@ -62,5 +62,3 @@ function imageShortcode(src, alt = "") {
     return imageHtml;
   }
 }
-
-module.exports = { imageShortcode };

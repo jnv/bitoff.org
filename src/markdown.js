@@ -1,7 +1,7 @@
-const markdownItAnchor = require("markdown-it-anchor");
-const footnote = require("markdown-it-footnote");
+import markdownItAnchor from "markdown-it-anchor";
+import footnote from "markdown-it-footnote";
 
-module.exports = (mdLib, eleventyConfig) => {
+export default (mdLib, eleventyConfig) => {
   mdLib.use(markdownItAnchor, {
     level: [1, 2, 3, 4],
     slugify: eleventyConfig.getFilter("slug"),

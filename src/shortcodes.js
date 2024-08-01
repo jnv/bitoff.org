@@ -1,4 +1,4 @@
-const { imageShortcode } = require("./image");
+import { imageShortcode } from "./image.js";
 
 function figure(content, src, alt) {
   const img = imageShortcode.call(this, src, alt);
@@ -58,7 +58,7 @@ function codesandbox(
   return `<div class="embed embed-codesandbox"><iframe class="embed-iframe" src="${iframeUrl.toString()}" title="${title}" loading="lazy" sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></iframe></div>`;
 }
 
-module.exports = (eleventyConfig) => {
+export default (eleventyConfig) => {
   eleventyConfig.addPairedShortcode("figure", figure);
   eleventyConfig.addPairedShortcode("figquote", figquote);
   eleventyConfig.addShortcode("img", imageShortcode);

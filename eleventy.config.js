@@ -1,14 +1,14 @@
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginNavigation = require("@11ty/eleventy-navigation");
-const markdownIt = require("markdown-it");
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import pluginNavigation from "@11ty/eleventy-navigation";
+import markdownIt from "markdown-it";
 
-const pluginFilters = require("./src/filters");
-const pluginShortcodes = require("./src/shortcodes");
-const amendMarkdown = require("./src/markdown");
-const pluginDrafts = require("./src/drafts");
+import pluginFilters from "./src/filters.js";
+import pluginShortcodes from "./src/shortcodes.js";
+import amendMarkdown from "./src/markdown.js";
+import pluginDrafts from "./src/drafts.js";
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "./public/": "/" });
 
   // Add plugins
