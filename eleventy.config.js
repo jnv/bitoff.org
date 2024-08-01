@@ -24,10 +24,6 @@ module.exports = function (eleventyConfig) {
   // For JSON feed
   eleventyConfig.addJavaScriptFunction("absoluteUrl", pluginRss.absoluteUrl);
   eleventyConfig.addJavaScriptFunction(
-    "htmlToAbsoluteUrls",
-    pluginRss.convertHtmlToAbsoluteUrls,
-  );
-  eleventyConfig.addJavaScriptFunction(
     "dateToRfc3339",
     pluginRss.dateToRfc3339,
   );
