@@ -1,4 +1,4 @@
-{%- set absoluteUrl %}{{ post.url | htmlBaseUrl(metadata.base) }}{% endset -%}
+{%- set absoluteUrl %}{{ page.url | htmlBaseUrl(metadata.base) }}{% endset -%}
 <!doctype html>
 <html lang="{{ metadata.language }}">
 
@@ -9,11 +9,11 @@
   <meta name="description" content="{{ description or metadata.description }}">
   <meta name="generator" content="{{ eleventy.generator }}">
   <meta name="color-scheme" content="dark light">
-  <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+  <link rel="stylesheet" href="/css/index.css">
   <link rel="canonical" href="{{ canonical or absoluteUrl }}">
-  <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml"
+  <link rel="alternate" href="{{ metadata.feed.path | htmlBaseUrl(metadata.base) }}" type="application/atom+xml"
     title="{{ metadata.title }} RSS feed">
-  <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/feed+json"
+  <link rel="alternate" href="{{ metadata.jsonfeed.path | htmlBaseUrl(metadata.base) }}" type="application/feed+json"
     title="{{ metadata.title }} JSON feed">
   <link rel="webmention" href="https://webmention.io/jan.vlnas.cz/webmention" />
 </head>
@@ -25,15 +25,15 @@
   <footer class="site-footer">
     <nav class="site-nav">
       {%- for entry in collections.all | eleventyNavigation %}
-      {%- if entry.url != page.url %}
-      <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-      {%- elif entry.url !== "/" %}
-      <strong>{{ entry.title }}</strong>
-      {% endif %}
+        {%- if entry.url != page.url %}
+        <a href="{{ entry.url }}">{{ entry.title }}</a>
+        {%- elif entry.url !== "/" %}
+        <strong>{{ entry.title }}</strong>
+        {% endif %}
       {%- endfor %}
     </nav>
   </footer>
-  <!-- Current page: {{ page.url | url }} -->
+  <!-- Current page: {{ page.url }} -->
 </body>
 
 </html>
