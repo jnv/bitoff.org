@@ -1,4 +1,3 @@
-const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
@@ -35,8 +34,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setServerOptions({
     showVersion: true,
   });
-
-  eleventyConfig.addPlugin(UpgradeHelper);
 
   return {
     templateFormats: ["md", "njk", "html", "11ty.js"],
