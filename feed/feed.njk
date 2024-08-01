@@ -1,6 +1,7 @@
 ---
 # Metadata comes from _data/metadata.json
-permalink: "{{ metadata.feed.path }}"
+eleventyComputed:
+  permalink: "{{ metadata.feed.path }}"
 noSitemap: true
 eleventyExcludeFromCollections: false
 eleventyImport:
@@ -9,14 +10,12 @@ eleventyNavigation:
   key: "RSS"
   order: 10
 ---
-
-{%- set absoluteUrl %}{{ metadata.feed.path | url | absoluteUrl(metadata.url) }}{% endset -%}
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ metadata.title }}</title>
   <subtitle>{{ metadata.feed.subtitle }}</subtitle>
-  <link href="{{ absoluteUrl }}" rel="self"/>
-  <link href="{{ metadata.url }}"/>
+  <link href="{{ permalink | htmlBaseUrl(metadata.base) }}" rel="self"/>
+  <link href="{{ metadata.base | addPathPrefixToFullUrl }}"/>
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ metadata.feed.id }}</id>
   <author>
@@ -24,13 +23,13 @@ eleventyNavigation:
     <email>{{ metadata.author.email }}</email>
   </author>
   {%- for post in collections.posts | reverse %}
-    {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+    {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl(metadata.base) }}{% endset %}
     <entry>
       <title>{{ post.data.title }}</title>
       <link href="{{ absolutePostUrl }}"/>
       <updated>{{ post.date | dateToRfc3339 }}</updated>
       <id>{{- metadata.feed.id }}:posts:{{ post.fileSlug -}}</id>
-      <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+      <content type="html">{{ post.content | renderTransforms(post.data.page, metadata.base) }}</content>
     </entry>
   {%- endfor %}
 </feed>

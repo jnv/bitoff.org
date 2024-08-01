@@ -1,6 +1,7 @@
 {
   "title": "bit off",
   "url": "https://www.bitoff.org/",
+  "base": "https://www.bitoff.org/",
   "language": "en",
   "description": "An occassional weblog.",
   "feed": {
