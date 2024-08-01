@@ -21,13 +21,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginFilters);
   eleventyConfig.addPlugin(pluginShortcodes);
 
-  // For JSON feed
-  eleventyConfig.addJavaScriptFunction("absoluteUrl", pluginRss.absoluteUrl);
-  eleventyConfig.addJavaScriptFunction(
-    "dateToRfc3339",
-    pluginRss.dateToRfc3339,
-  );
-
   const mdOptions = {
     html: true,
     linkify: true,
