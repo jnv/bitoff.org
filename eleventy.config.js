@@ -39,14 +39,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(UpgradeHelper);
 
   return {
-    // Control which files Eleventy will process
-    // e.g.: *.md, *.njk, *.html, *.liquid
     templateFormats: ["md", "njk", "html", "11ty.js"],
-
-    // Pre-process *.md files with: (default: `liquid`)
+    // Pre-process *.md files with:
     markdownTemplateEngine: "njk",
-
-    // Pre-process *.html files with: (default: `liquid`)
+    // Pre-process *.html files with:
     htmlTemplateEngine: "njk",
 
     // -----------------------------------------------------------------
@@ -63,7 +59,7 @@ module.exports = function (eleventyConfig) {
     pathPrefix: "/",
     // -----------------------------------------------------------------
 
-    // These are all optional (defaults are shown):
+    // These are all optional:
     dir: {
       input: ".",
       includes: "_includes",
