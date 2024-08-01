@@ -15,8 +15,8 @@ module.exports.render = async function (data) {
     version: "https://jsonfeed.org/version/1.1",
     title: metadata.title,
     language: metadata.language,
-    home_page_url: metadata.url,
-    feed_url: this.absoluteUrl(this.url(permalink(data)), metadata.url),
+    home_page_url: metadata.base,
+    feed_url: this.absoluteUrl(this.url(permalink(data)), metadata.base),
     description: metadata.subtitle,
     author: {
       name: metadata.author.name,
@@ -26,7 +26,7 @@ module.exports.render = async function (data) {
   };
 
   for (const post of collections.posts.slice(sliceStart).reverse()) {
-    const absolutePostUrl = this.absoluteUrl(this.url(post.url), metadata.url);
+    const absolutePostUrl = this.absoluteUrl(this.url(post.url), metadata.base);
     const item = {
       id: `${metadata.feed.id}:posts:${post.fileSlug}`,
       url: absolutePostUrl,

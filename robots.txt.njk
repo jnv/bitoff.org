@@ -3,4 +3,4 @@ permalink: '/robots.txt'
 eleventyExcludeFromCollections: true
 ---
 
-Sitemap: {{ '/sitemap.xml' | url | absoluteUrl(metadata.url) }}
+Sitemap: {{ '/sitemap.xml' | htmlBaseUrl(metadata.base) }}

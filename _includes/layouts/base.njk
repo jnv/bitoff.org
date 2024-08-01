@@ -1,4 +1,4 @@
-{%- set absoluteUrl %}{{ page.url | url | absoluteUrl(metadata.url) }}{% endset -%}
+{%- set absoluteUrl %}{{ post.url | htmlBaseUrl(metadata.base) }}{% endset -%}
 <!doctype html>
 <html lang="{{ metadata.language }}">
 
