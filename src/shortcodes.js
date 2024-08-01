@@ -12,7 +12,7 @@ ${caption}
 }
 
 function figquote(content, caption, cite) {
-  const citeAttr = cite ? ` cite=${cite}` : "";
+  const citeAttr = cite ? ` cite="${cite}"` : "";
 
   return `<figure class="figquote">
 <blockquote${citeAttr}>
