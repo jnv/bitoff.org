@@ -126,6 +126,11 @@ blockquote {
   margin-bottom: 2rem;
 }
 
+.post-discussion {
+  border-top: solid thin;
+  margin-top: 2rem;
+}
+
 .post-footer {
   margin-top: 2rem;
 }
