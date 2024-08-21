@@ -51,7 +51,7 @@ The site wouldn't be complete without a [Twitter bot](https://twitter.com/IsTwAp
 
 The site generator creates a [feed with a single entry](https://jnv.github.io/istwitterapifree.com/feed.xml). The entry is identified by the current date, so feed readers will display a new item at most once a day, regardless of how many times the site is regenerated.
 
-This feed is passed to automation. For Twitter, I've used <acronym title="If This Then That">IFTTT</acronym> to post a new feed item to the Twitter account. I assume that a larger provider like IFTTT already pays for Twitter API, so it won't be affected.
+This feed is passed to automation. For Twitter, I've used <abbr title="If This Then That">IFTTT</abbr> to post a new feed item to the Twitter account. I assume that a larger provider like IFTTT already pays for Twitter API, so it won't be affected.
 
 {% figure "ifttt.png", "Screenshot of IFTTT applet: If new feed item, then post a tweet." %}
 

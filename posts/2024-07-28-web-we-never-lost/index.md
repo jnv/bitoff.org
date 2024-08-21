@@ -273,7 +273,7 @@ Create a [single-serving site](https://en.wikipedia.org/wiki/Single-serving_site
 
 - This one asks [Is it Friday yet?](http://isitfridayyet.net/)
 - This one [makes everything OK](https://make-everything-ok.com/)
-- Czechs and Slovaks probably know <a href="http://milujipraci.cz/" hreflang="cs" lang="cs">Miluji práci</a> (I love my job); it’s actually very <acronym title="not safe for work">NSFW</acronym> soundboard
+- Czechs and Slovaks probably know <a href="http://milujipraci.cz/" hreflang="cs" lang="cs">Miluji práci</a> (I love my job); it’s actually very <abbr title="not safe for work">NSFW</abbr> soundboard
 
 Last year I also made a single-serving site of my own to [track whether Twitter’s API is free](/is-twitter-api-free/). It didn’t become a viral sensation but it was fun to build. I let the domain expire, but the page is [archived on GitHub](https://jnv.github.io/istwitterapifree.com/).
 
