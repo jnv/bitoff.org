@@ -3,6 +3,7 @@ title: "The Web We've (Never) Lost"
 description: 'Based on my talk for PragueJS meetup from February 2024'
 discussion:
   Fediverse: https://mastodon.social/@jnv/112864447540194801
+  Hacker News: https://news.ycombinator.com/item?id=41258758
 ---
 
 This text is partially a transcript, partially a recollection of a talk I presented on the [PragueJS meetup](https://www.meetup.com/praguejs/) in February 2024.[^recording]
