@@ -1,15 +1,15 @@
 ---
 layout: layouts/base.njk
 eleventyExcludeFromCollections: true
-title: "Resources for the talk Dive into the ActivityPub"
+title: 'Resources for the talk Dive into the ActivityPub'
 ---
 
-# Resources for the talk Dive into the ActivityPub on WebExpo 2024
+# Resources for the talk _Dive into the ActivityPub_
 
-- [Source code of the demo](https://glitch.com/edit/#!/apwebexpo24)
-    - Test instance: https://activitypub.academy/
+- [Source code of the demo](https://glitch.com/edit/#!/apdemo24)
+  - Test instance: https://activitypub.academy/
 - [ActivityPub specification](https://www.w3.org/TR/activitypub/)
-    - [Homepage of ActivityPub](https://activitypub.rocks/)
+  - [Homepage of ActivityPub](https://activitypub.rocks/)
 - [ActivityStreams vocabulary](https://www.w3.org/TR/activitystreams-vocabulary/)
 
 ## Quoted
@@ -32,16 +32,23 @@ title: "Resources for the talk Dive into the ActivityPub"
 
 ### What's being built with ActivityPub
 
-- Microblogging: Mastodon, Misskey, Pleroma, Friendica…
-- Blogging: WriteFreely, WordPress plugin, Ghost.org*
-- Discussion forums: Lemmy, mbin, NodeBB, Discourse…
-- Media sharing: Pixelfed, PeerTube, Funkwhale, Owncast…
-- Book reviews: BookWyrm
-- Podcasts hosting: Castopod
+- Microblogging: [Mastodon](https://joinmastodon.org/), [Misskey](https://misskey-hub.net/en/), [Pleroma](https://pleroma.social/), [Friendica](https://friendi.ca/)…
+- Blogging: [WriteFreely](https://writefreely.org/), [WordPress plugin](https://wordpress.org/plugins/activitypub/), [Ghost.org](https://activitypub.ghost.org/)
+- Discussion forums: [Lemmy](https://join-lemmy.org/), [mbin](https://joinmbin.org/), [NodeBB](https://docs.nodebb.org/activitypub/), [Discourse](https://discourse.org/plugins/activitypub.html)…
+- Media sharing: [Pixelfed](https://pixelfed.org/), [PeerTube](https://joinpeertube.org/), [Funkwhale](https://www.funkwhale.audio/), [Owncast](https://owncast.online/)…
+- Book reviews: [BookWyrm](https://bookwyrm.social/)
+- Podcasts hosting: [Castopod](https://castopod.org/)
 - [ActivityPub in GitLab](https://docs.gitlab.com/ee/development/activitypub/)
 - [ForgeFed](https://forgefed.org/)
+
+### Development tools & frameworks
+
+- [ActivityPub Academy](https://activitypub.academy/)
+- [Fedify](https://fedify.dev/) (TypeScript)
+- [Go ActivityPub](https://github.com/go-ap) (Go)
+- [PubKit](https://pubkit.net/) (closed beta)
+- More resources in [Delightful ActivityPub Development](https://codeberg.org/fediverse/delightful-activitypub-development/)
 
 ## Learning resources
 
 See [Guide for new ActivityPub implementers](https://socialhub.activitypub.rocks/pub/guide-for-new-activitypub-implementers).
-
