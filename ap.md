@@ -24,12 +24,6 @@ title: 'Resources for the talk Dive into the ActivityPub'
 
 ## Projects
 
-- [Mastodon](https://joinmastodon.org/)
-- [Writefreely](https://writefreely.org/)
-- [Pixelfed](https://pixelfed.org/)
-- [Lemmy](https://join-lemmy.org/)
-- [ActivityPub for WordPress](https://wordpress.org/plugins/activitypub/)
-
 ### What's being built with ActivityPub
 
 - Microblogging: [Mastodon](https://joinmastodon.org/), [Misskey](https://misskey-hub.net/en/), [Pleroma](https://pleroma.social/), [Friendica](https://friendi.ca/)…
@@ -38,8 +32,9 @@ title: 'Resources for the talk Dive into the ActivityPub'
 - Media sharing: [Pixelfed](https://pixelfed.org/), [PeerTube](https://joinpeertube.org/), [Funkwhale](https://www.funkwhale.audio/), [Owncast](https://owncast.online/)…
 - Book reviews: [BookWyrm](https://bookwyrm.social/)
 - Podcasts hosting: [Castopod](https://castopod.org/)
-- [ActivityPub in GitLab](https://docs.gitlab.com/ee/development/activitypub/)
-- [ForgeFed](https://forgefed.org/)
+- Federated code forges: [ActivityPub in GitLab](https://docs.gitlab.com/ee/development/activitypub/), [ForgeFed](https://forgefed.org/), [Forgejo](https://forgejo.org/)
+
+More on [Fediverse.Party](https://fediverse.party/) and [Delightful Fediverse Apps](https://codeberg.org/fediverse/delightful-fediverse-apps).
 
 ### Development tools & frameworks
 
@@ -47,7 +42,8 @@ title: 'Resources for the talk Dive into the ActivityPub'
 - [Fedify](https://fedify.dev/) (TypeScript)
 - [Go ActivityPub](https://github.com/go-ap) (Go)
 - [PubKit](https://pubkit.net/) (closed beta)
-- More resources in [Delightful ActivityPub Development](https://codeberg.org/fediverse/delightful-activitypub-development/)
+
+More resources in [Delightful ActivityPub Development](https://codeberg.org/fediverse/delightful-activitypub-development/)
 
 ## Learning resources
 
