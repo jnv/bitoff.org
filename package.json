@@ -32,6 +32,6 @@
     "markdown-it-footnote": "^4.0.0"
   },
   "devDependencies": {
-    "prettier": "3.4.2"
+    "prettier": "3.5.2"
   }
 }
