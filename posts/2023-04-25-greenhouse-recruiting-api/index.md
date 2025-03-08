@@ -2,6 +2,8 @@
 title: 'Get started with Greenhouse APIs: Overview and authentication'
 description: 'Greenhouse Recruiting provides multiple APIs with different authentication mechanisms. We will show you which one to choose and give you example API calls in JavaScript.'
 email: false
+discussion:
+  Dev.to: https://dev.to/superface/get-started-with-greenhouse-apis-overview-and-authentication-2ip0
 ---
 
 {% callout "Author's note" %}
