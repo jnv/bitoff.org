@@ -3,6 +3,8 @@ title: 'Instagram API: Find the right account ID'
 description: 'How to get account details from Instagram Graph API'
 email: false
 discussion:
+  Dev.to: https://dev.to/superface/instagram-api-find-the-right-account-id-4k3j
+  Medium: https://medium.com/superface/instagram-api-find-the-right-account-id-1ec63953de5a
 ---
 
 {% callout "Author's note" %}
