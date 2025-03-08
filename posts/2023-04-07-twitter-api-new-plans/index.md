@@ -14,7 +14,7 @@ I am no longer working with Twitter (X) API and the content of this article is o
 
 The new Twitter API access tiers [were finally announced][announcement]. Unfortunately, some important details were left out from the announcement, leaving many developers confused and stressed out as the [deprecation deadline](https://twitter.com/TwitterDev/status/https://web.archive.org/web/20230424153629/https://twitter.com/TwitterDev/status/1641222786894135296) is getting closer.
 
-At Superface, we maintain social media integrations, including Twitter’s, and we’ve [built an authorization library for Twitter API][twitter-oauth2-passport]], so we’ve been closely observing the recent developments around Twitter API. (I’ve even [made a site for that][is-twitter-api-free].)
+At Superface, we maintain social media integrations, including Twitter’s, and we’ve [built an authorization library for Twitter API][twitter-oauth2-passport], so we’ve been closely observing the recent developments around Twitter API. (I’ve even [made a site for that][is-twitter-api-free].)
 
 In this article, I have collected observations and recommendations about Twitter’s new API. In summary:
 
@@ -143,6 +143,5 @@ Here I'm tracking major updates to the article.
 
 [announcement]: https://web.archive.org/web/20230406185829/https://twitter.com/TwitterDev/status/1641222782594990080
 [theverge]: https://www.theverge.com/2023/4/6/23673043/twitter-substack-embeds-bots-tools-api
-
 [is-twitter-api-free]: {{ "../2023-02-08-is-twitter-api-free/index.md" | inputPathToUrl }}
-[twitter-oauth2-passport]]: https://web.archive.org/web/20230329194459/https://superface.ai/blog/twitter-oauth2-passport
+[twitter-oauth2-passport]: https://web.archive.org/web/20230329194459/https://superface.ai/blog/twitter-oauth2-passport
