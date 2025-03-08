@@ -1,6 +1,6 @@
 ---
 title: "Is Twitter API Free? I've built a website to find out"
-description: "A single-serving site for checking the status of Twitter API paywall."
+description: 'A single-serving site for checking the status of Twitter API paywall.'
 discussion:
   Dev.to: https://dev.to/jnv/is-twitter-api-free-ive-built-a-website-to-find-out-3hn4
   Twitter: https://twitter.com/janvlnas/status/1622729833426874369
@@ -9,11 +9,11 @@ discussion:
   Hashnode: https://jnv.hashnode.dev/is-twitter-api-free
 ---
 
-<aside>
+{% callout "Updated on February 2nd, 2024" %}
 
-<ins datetime="2024-02-02">Updated on February 2nd, 2024: Project's domain has expired. You can find the final archived version from June 2023 [on GitHub Pages][istwitterapifree] and previous versions using [Wayback Machine](https://web.archive.org/web/20230201000000*/https://istwitterapifree.com/).</ins>
+<ins datetime="2024-02-02">Project's domain has expired. You can find the final archived version from June 2023 [on GitHub Pages][istwitterapifree] and previous versions using [Wayback Machine](https://web.archive.org/web/20230201000000*/https://istwitterapifree.com/).</ins>
 
-</aside>
+{% endcallout %}
 
 Last week, Twitter announced the end of free access to its public API. The announcement came [in a Tweet][announcement], a single week before the change, lacked any details about the pricing, and only [vaguely promised more information](https://twitter.com/TwitterDev/status/1621027418680229888).
 
@@ -74,16 +74,16 @@ const diffMs = deadline.getTime() - now.getTime();
 // Round the difference to number of days
 const diffDays = Math.round(diffMs / (1000 * 3600 * 24));
 
-const rtf = new Intl.RelativeTimeFormat("en", {
-  localeMatcher: "best fit",
-  numeric: "auto",
-  style: "long",
+const rtf = new Intl.RelativeTimeFormat('en', {
+  localeMatcher: 'best fit',
+  numeric: 'auto',
+  style: 'long',
 });
 
 // 3 → "in 3 days"
 // 0 → "today"
 // -1 → "yesterday" etc.
-const daysRelative = rtf.format(diffDays, "days");
+const daysRelative = rtf.format(diffDays, 'days');
 
 return diffDays > 0
   ? `The deadline is ${daysRelative}`

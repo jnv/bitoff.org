@@ -118,6 +118,9 @@ blockquote {
   padding: 0;
   margin: 0;
 }
+.callout ins {
+  font-style: normal;
+}
 
 /** Code **/
 pre {
