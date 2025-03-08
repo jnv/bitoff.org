@@ -4,7 +4,6 @@ description: "The nice and not-so-nice parts of LinkedIn's new, versioned Conten
 syntaxHighlighting: true
 discussion:
   Dev.to: https://dev.to/jnv/linkedins-new-posts-api-the-good-the-bad-and-the-ugly-5e53
-  Twitter: https://twitter.com/janvlnas/status/1645814248201678848
   LinkedIn: https://www.linkedin.com/posts/janvlnas_linkedins-new-posts-api-the-good-the-bad-activity-7053506095784325121-pvRk
 ---
 

@@ -3,7 +3,6 @@ title: "Is Twitter API Free? I've built a website to find out"
 description: 'A single-serving site for checking the status of Twitter API paywall.'
 discussion:
   Dev.to: https://dev.to/jnv/is-twitter-api-free-ive-built-a-website-to-find-out-3hn4
-  Twitter: https://twitter.com/janvlnas/status/1622729833426874369
   Mastodon: https://mastodon.social/@jnv/109827785367749581
   LinkedIn: https://www.linkedin.com/posts/janvlnas_is-twitter-api-free-activity-7027319567878115328-qZGY
 ---

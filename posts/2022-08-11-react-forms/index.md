@@ -4,7 +4,6 @@ description: "How to use native HTML forms validation in React and customize the
 syntaxHighlighting: true
 discussion:
   Dev.to: https://dev.to/jnv/lightweight-forms-validation-in-react-35og
-  Twitter: https://twitter.com/janvlnas/status/1557802040851587072
   Mastodon: https://mastodon.social/@jnv/108805752174043109
 ---
 

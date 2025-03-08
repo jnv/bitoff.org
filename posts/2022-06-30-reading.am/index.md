@@ -4,7 +4,7 @@ description: "Back in 2012 I have discovered a small social network. Now, after 
 discussion:
   Dev.to: https://dev.to/jnv/saying-goodbye-to-readingam-4fhc
   Medium: https://medium.com/@jnv/saying-goodbye-to-reading-am-20744fc71950
-  Twitter: https://twitter.com/janvlnas/status/1542394753567756289
+  Mastodon: https://mastodon.social/@jnv/108565020565535509
 ---
 
 Back in 2012 I have discovered a small social network. Now, after 10 years and over 5700 links posted, it's going away.
