@@ -6,7 +6,6 @@ discussion:
   Twitter: https://twitter.com/janvlnas/status/1622729833426874369
   Mastodon: https://mastodon.social/@jnv/109827785367749581
   LinkedIn: https://www.linkedin.com/posts/janvlnas_is-twitter-api-free-activity-7027319567878115328-qZGY
-  Hashnode: https://jnv.hashnode.dev/is-twitter-api-free
 ---
 
 {% callout "Updated on February 2nd, 2024" %}
