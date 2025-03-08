@@ -17,15 +17,17 @@ mainClass: h-entry
 <div class="e-content">
   {{ content | safe }}
 </div>
-<aside class="post-discussion">
-  <h2>Comments</h2>
-  <p>
-    If you have any feedback, comments, or corrections on this post, <a href="mailto:{{ metadata.author.email }}?subject={{ title | urlencode }}">send me an email</a>.
-  </p>
-  {% if discussion %}
-    <p>You can also discuss this post on {{ discussion | linkifyMap | safe }}.</p>
-  {% endif %}
-</aside>
+{% if discussion or email !== false %}
+  <aside class="post-discussion">
+    <h2>Comments</h2>
+    {% if email !== false %}
+      <p>If you have any feedback, comments, or corrections on this post, <a href="mailto:{{ metadata.author.email }}?subject={{ title | urlencode }}">send me an email</a>.</p>
+    {% endif %}
+    {% if discussion %}
+      <p>You can discuss this post on {{ discussion | linkifyMap | safe }}.</p>
+    {% endif %}
+  </aside>
+{% endif %}
 {#
 <footer
   class="post-footer">

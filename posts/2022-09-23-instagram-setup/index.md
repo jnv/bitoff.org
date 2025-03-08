@@ -1,6 +1,10 @@
 ---
 title: 'Get started with Instagram API: The Setup'
 description: 'First dive into Instagram Graph API: How to create a business account and a Facebook app.'
+discussion:
+  Dev.to: https://dev.to/superface/getting-started-with-instagram-api-the-setup-2mhi
+  Medium: https://medium.com/superface/get-started-with-instagram-api-the-setup-9d1a82db55e
+email: false
 ---
 
 {% callout "Author's note" %}
