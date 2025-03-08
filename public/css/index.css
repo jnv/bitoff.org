@@ -133,6 +133,21 @@ code {
   tab-size: 4;
 }
 
+/** Tables **/
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: solid thin;
+  padding: 0.5em;
+}
+
+th {
+  text-align: left;
+}
+
 /** global elements **/
 
 .site-footer {
