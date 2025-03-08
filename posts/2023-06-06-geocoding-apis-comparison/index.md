@@ -44,17 +44,17 @@ Oh, and one more thing: OneSDK is free and [open-source](https://github.com/supe
 
 ## Geocoding APIs compared
 
-| Provider    | Free Requests               | Rate Limit (requests per second)               | Pricing (per 1,000 requests)                         | Additional Notes                                            |
-| ----------- | --------------------------- | ---------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------- |
-| HERE        | 30,000/month                | 5                                              | $0.83 up to 5M<br/>$0.66 up to 10M                 |                                                             |
-| Google Maps | 40,000/month ($200 credit) | 50                                             | $5 up to 100,000<br/>$4 up to 500,000              | Attribution & Google Maps required                          |
-| Azure Maps  | 5,000/month                 | 500 (geocoding)<br/>250 (reverse geocoding)    | $4.50                                               |                                                             |
-| OpenCage    | 2,500/day                   | 1 (free)<br/>15 (X-Small)<br/>up to 40 (Large) | $0.17 (10,000 per day)<br/>$0.11 (300,000 per day) | Free trial for testing only<br/>Monthly fixed pricing       |
-| TomTom Maps | 2,500/day                   | 5                                              | $0.54                                               |                                                             |
-| LocationIQ  | 5,000/day                   | 2                                              | $0.16 (10,000 per day)<br/>$0.03 (1M per day)      | Free plan requires attribution<br/>Monthly fixed pricing    |
-| Nominatim   | n/a                         | 1                                              | n/a                                                  | Low-volume, noncommercial use only<br/>Attribution required |
+| Provider    | Free Requests              | Rate Limit (requests per second)             | Pricing (per 1,000 requests)                                | Additional Notes                                           |
+| ----------- | -------------------------- | -------------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------- |
+| HERE        | 30,000/month               | 5                                            | $0.83 up to 5M<br>$0.66 up to 10M                           |                                                            |
+| Google Maps | 40,000/month ($200 credit) | 50                                           | $5 up to 100,000<br>$4 up to 500,000                        | Attribution & Google Maps required                         |
+| Azure Maps  | 5,000/month                | 500 (geocoding)<br>250 (reverse geocoding)   | $4.50                                                       |                                                            |
+| OpenCage    | 2,500/day                  | 1 (free)<br>15 (X-Small)<br>up to 40 (Large) | $0.17 (10,000 per day)<br>$0.11 (300,000 per day)[^monthly] | Free trial for testing only<br>Monthly fixed pricing       |
+| TomTom Maps | 2,500/day                  | 5                                            | $0.54                                                       |                                                            |
+| LocationIQ  | 5,000/day                  | 2                                            | $0.16 (10,000 per day)<br>$0.03 (1M per day)[^monthly]      | Free plan requires attribution<br>Monthly fixed pricing    |
+| Nominatim   | n/a                        | 1                                            | n/a                                                         | Low-volume, noncommercial use only<br>Attribution required |
 
-_For services with monthly subscription (OpenCage and LocationIQ) the price per 1,000 requests is based on daily limit per 30 days for the lowest and the highest plans paid monthly._
+[^monthly]: For services with monthly subscription (OpenCage and LocationIQ) the price per 1,000 requests is based on daily limit per 30 days for the lowest and the highest plans paid monthly.\_
 
 ### HERE
 
