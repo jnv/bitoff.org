@@ -109,6 +109,29 @@ blockquote {
   padding: 0 1.5em;
 }
 
+.callout {
+  border: solid thin;
+  padding: 1em 1em 0;
+}
+.callout-title {
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+/** Code **/
+pre {
+  border: solid thin;
+  padding: 0.5em;
+  overflow-x: auto;
+}
+
+code {
+  tab-size: 4;
+}
+
+/** global elements **/
+
 .site-footer {
   margin-top: 3rem;
 }
@@ -133,15 +156,4 @@ blockquote {
 
 .post-footer {
   margin-top: 2rem;
-}
-
-/** Code **/
-pre {
-  border: solid thin;
-  padding: 0.5em;
-  overflow-x: auto;
-}
-
-code {
-  tab-size: 4;
 }

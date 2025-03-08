@@ -1,10 +1,10 @@
-import { imageShortcode } from "./image.js";
+import { imageShortcode } from './image.js';
 
 function figure(content, src, alt) {
   const img = imageShortcode.call(this, src, alt);
 
   const caption =
-    content.trim() === "" ? "" : `<figcaption>\n${content}\n</figcaption>`;
+    content.trim() === '' ? '' : `<figcaption>\n${content}\n</figcaption>`;
   return `<figure>
 ${img}
 ${caption}
@@ -12,7 +12,7 @@ ${caption}
 }
 
 function figquote(content, caption, cite) {
-  const citeAttr = cite ? ` cite="${cite}"` : "";
+  const citeAttr = cite ? ` cite="${cite}"` : '';
 
   return `<figure class="figquote">
 <blockquote${citeAttr}>
@@ -28,18 +28,28 @@ ${content}
 </figure>`;
 }
 
+function callout(content, title, level = 2) {
+  const heading = `h${level}`;
+  return `<section role="note" class="callout">
+<${heading} class="callout-title">${title}</${heading}>
+
+${content}
+
+</section>`;
+}
+
 function codesandbox(
   urlOrId,
-  { runonclick = 0, view = "preview", title = "", path, module },
+  { runonclick = 0, view = 'preview', title = '', path, module }
 ) {
   let id = urlOrId;
-  if (urlOrId.startsWith("https://")) {
+  if (urlOrId.startsWith('https://')) {
     const url = new URL(urlOrId);
-    const pathParts = url.pathname.split("/");
+    const pathParts = url.pathname.split('/');
     id = pathParts[2]; // ['', 's', 'id-1234']
   }
 
-  const iframeUrl = new URL(id, "https://codesandbox.io/embed/");
+  const iframeUrl = new URL(id, 'https://codesandbox.io/embed/');
   // https://codesandbox.io/docs/embedding#embed-options
   const params = {
     codemirror: 1,
@@ -59,8 +69,9 @@ function codesandbox(
 }
 
 export default (eleventyConfig) => {
-  eleventyConfig.addPairedShortcode("figure", figure);
-  eleventyConfig.addPairedShortcode("figquote", figquote);
-  eleventyConfig.addShortcode("img", imageShortcode);
-  eleventyConfig.addShortcode("codesandbox", codesandbox);
+  eleventyConfig.addPairedShortcode('figure', figure);
+  eleventyConfig.addPairedShortcode('figquote', figquote);
+  eleventyConfig.addPairedShortcode('callout', callout);
+  eleventyConfig.addShortcode('img', imageShortcode);
+  eleventyConfig.addShortcode('codesandbox', codesandbox);
 };
