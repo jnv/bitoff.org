@@ -9,7 +9,7 @@ discussion:
 {% callout "Author's note" %}
 This article was originally [published](https://web.archive.org/web/20230407124115/https://superface.ai/blog/twitter-api-new-plans) on [Superface](https://superface.ai/) blog before the pivot to agentic tooling platform and is republished here with company's permission.
 
-I am no longer working with Twitter API and the content of this article is outdated.
+I am no longer working with Twitter (X) API and the content of this article is outdated.
 {% endcallout %}
 
 The new Twitter API access tiers [were finally announced][announcement]. Unfortunately, some important details were left out from the announcement, leaving many developers confused and stressed out as the [deprecation deadline](https://twitter.com/TwitterDev/status/https://web.archive.org/web/20230424153629/https://twitter.com/TwitterDev/status/1641222786894135296) is getting closer.
