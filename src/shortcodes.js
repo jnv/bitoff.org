@@ -29,13 +29,15 @@ ${content}
 }
 
 function callout(content, title, level = 2) {
-  const heading = `h${level}`;
-  return `<section role="note" class="callout">
-<${heading} class="callout-title">${title}</${heading}>
+  return `<div role="note" class="callout">
+
+<p class="callout-title" role="heading" aria-level="${level}"><strong>${title}</strong></p>
 
 ${content}
 
-</section>`;
+<hr class="callout-divider" />
+
+</div>`;
 }
 
 function codesandbox(
