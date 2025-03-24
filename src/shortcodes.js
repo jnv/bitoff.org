@@ -35,8 +35,6 @@ function callout(content, title, level = 2) {
 
 ${content}
 
-<hr class="callout-divider" />
-
 </div>`;
 }
 
