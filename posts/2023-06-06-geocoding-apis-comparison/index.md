@@ -54,7 +54,7 @@ Oh, and one more thing: OneSDK is free and [open-source](https://github.com/supe
 | LocationIQ  | 5,000/day                  | 2                                            | $0.16 (10,000 per day)<br>$0.03 (1M per day)[^monthly]      | Free plan requires attribution<br>Monthly fixed pricing    |
 | Nominatim   | n/a                        | 1                                            | n/a                                                         | Low-volume, noncommercial use only<br>Attribution required |
 
-[^monthly]: For services with monthly subscription (OpenCage and LocationIQ) the price per 1,000 requests is based on daily limit per 30 days for the lowest and the highest plans paid monthly.\_
+[^monthly]: For services with monthly subscription (OpenCage and LocationIQ) the price per 1,000 requests is based on daily limit per 30 days for the lowest and the highest plans paid monthly.
 
 ### HERE
 
