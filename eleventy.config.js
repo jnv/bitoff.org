@@ -1,15 +1,15 @@
-import pluginRss from "@11ty/eleventy-plugin-rss";
-import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import pluginNavigation from "@11ty/eleventy-navigation";
-import markdownIt from "markdown-it";
+import pluginRss from '@11ty/eleventy-plugin-rss';
+import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
+import pluginNavigation from '@11ty/eleventy-navigation';
+import markdownIt from 'markdown-it';
 
-import pluginFilters from "./src/filters.js";
-import pluginShortcodes from "./src/shortcodes.js";
-import amendMarkdown from "./src/markdown.js";
-import pluginDrafts from "./src/drafts.js";
+import pluginFilters from './src/filters.js';
+import pluginShortcodes from './src/shortcodes.js';
+import amendMarkdown from './src/markdown.js';
+import pluginDrafts from './src/drafts.js';
 
 export default function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ "./public/": "/" });
+  eleventyConfig.addPassthroughCopy({ './public/': '/' });
 
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
@@ -22,12 +22,11 @@ export default function (eleventyConfig) {
 
   const mdOptions = {
     html: true,
-    linkify: true,
   };
 
-  eleventyConfig.setLibrary("md", markdownIt(mdOptions));
-  eleventyConfig.amendLibrary("md", (mdLib) =>
-    amendMarkdown(mdLib, eleventyConfig),
+  eleventyConfig.setLibrary('md', markdownIt(mdOptions));
+  eleventyConfig.amendLibrary('md', (mdLib) =>
+    amendMarkdown(mdLib, eleventyConfig)
   );
 
   // Override @11ty/eleventy-dev-server defaults (used only with --serve)
@@ -36,11 +35,11 @@ export default function (eleventyConfig) {
   });
 
   return {
-    templateFormats: ["md", "njk", "html", "11ty.js"],
+    templateFormats: ['md', 'njk', 'html', '11ty.js'],
     // Pre-process *.md files with:
-    markdownTemplateEngine: "njk",
+    markdownTemplateEngine: 'njk',
     // Pre-process *.html files with:
-    htmlTemplateEngine: "njk",
+    htmlTemplateEngine: 'njk',
 
     // -----------------------------------------------------------------
     // If your site deploys to a subdirectory, change `pathPrefix`.
@@ -53,15 +52,15 @@ export default function (eleventyConfig) {
     // You can also pass this in on the command line using `--pathprefix`
 
     // Optional (default is shown)
-    pathPrefix: "/",
+    pathPrefix: '/',
     // -----------------------------------------------------------------
 
     // These are all optional:
     dir: {
-      input: ".",
-      includes: "_includes",
-      data: "_data",
-      output: "_site",
+      input: '.',
+      includes: '_includes',
+      data: '_data',
+      output: '_site',
     },
   };
-};
+}
