@@ -8,7 +8,7 @@ discussion:
 {% callout "Author's note" %}
 The API Dispatch is a series I started as an internal newsletter at work. It's also available on [LinkedIn](https://www.linkedin.com/newsletters/r-d-api-mewsletter-7305909196418396160/).
 
-Originally published on March 2025.
+Originally published in March 2025.
 {% endcallout %}
 
 In March you may have noticed a sudden hype around **Model Context Protocol** (MCP). In this issue of The API Dispatch we will take a look into this hype, along with alternatives to MCP (like **agents.json**, **<abbr title="Unified Intent Mediator protocol">UIM</abbr>**, and **<abbr title="Agent Communication Protocol">ACP</abbr>**). In addition, there are recent news on standardization of RFCs related to **API deprecation** and **HTTP performance**.
