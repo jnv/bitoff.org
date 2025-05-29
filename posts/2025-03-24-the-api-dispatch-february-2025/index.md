@@ -1,5 +1,5 @@
 ---
-title: The API Dispatch, February 2025
+title: 'The API Dispatch #1'
 description: The first installment of a monthly ‘newsletter’ about APIs.
 discussion:
   LinkedIn: https://www.linkedin.com/pulse/api-dispatch-mewsletter-issue-1-mewsrnd-pavnc/
@@ -7,6 +7,8 @@ discussion:
 
 {% callout "Author's note" %}
 The API Dispatch is a series I started as an internal newsletter at work. It's also available on [LinkedIn](https://www.linkedin.com/newsletters/r-d-api-mewsletter-7305909196418396160/).
+
+Originally published in February 2025.
 {% endcallout %}
 
 Welcome to the pilot issue of the API ‘Mewsletter’. Unlike frontend, the world of APIs moves a bit slower. So beside the latest news, I plan to share some older but still valuable content. And maybe some standards.
