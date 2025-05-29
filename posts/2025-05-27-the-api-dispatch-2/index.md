@@ -1,6 +1,6 @@
 ---
 title: 'The API Dispatch #2: MCP is coming to eat our APIs! (or maybe not)'
-description: The March installment of a monthly ‘newsletter’ about APIs focuses on Model Context Protocol and other agents-related API abstractions. Also, I squeezed in recent RFCs for API deprecation and early hints.
+description: The March installment of a monthly ‘newsletter’ about APIs. The issue focuses on Model Context Protocol and similar abstractions.
 discussion:
   LinkedIn: https://www.linkedin.com/pulse/api-dispatch-mewsletter-issue-2-mewsrnd-xdx2e/
 ---
