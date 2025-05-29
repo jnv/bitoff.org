@@ -2,6 +2,7 @@
 title: "The API Dispatch #3: The perfect API design workflow doesn't exi…"
 description: The April installment of a monthly ‘newsletter’ about APIs. This issue focuses on OpenAPI Spec tooling and API design.
 discussion:
+  Fediverse: https://mastodon.social/@jnv/114593263280906063
   LinkedIn: https://www.linkedin.com/pulse/api-dispatch-mewsletter-issue-3-mewsrnd-t5joe/
 ---
 

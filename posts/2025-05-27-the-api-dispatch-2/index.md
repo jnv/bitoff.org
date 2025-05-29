@@ -2,6 +2,7 @@
 title: 'The API Dispatch #2: MCP is coming to eat our APIs! (or maybe not)'
 description: The March installment of a monthly ‘newsletter’ about APIs. The issue focuses on Model Context Protocol and similar abstractions.
 discussion:
+  Fediverse: https://mastodon.social/@jnv/114593248444158193
   LinkedIn: https://www.linkedin.com/pulse/api-dispatch-mewsletter-issue-2-mewsrnd-xdx2e/
 ---
 

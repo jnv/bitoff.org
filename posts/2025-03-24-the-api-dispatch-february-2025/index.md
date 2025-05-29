@@ -2,6 +2,7 @@
 title: 'The API Dispatch #1'
 description: The first installment of a monthly ‘newsletter’ about APIs.
 discussion:
+  Fediverse: https://mastodon.social/@jnv/114593238344455104
   LinkedIn: https://www.linkedin.com/pulse/api-dispatch-mewsletter-issue-1-mewsrnd-pavnc/
 ---
 
