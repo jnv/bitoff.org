@@ -23,15 +23,18 @@ async function createArticle() {
 
   try {
     const title = await rl.question('Enter article title: ');
+    let slug = await rl.question(
+      'Enter article slug (optional, press Enter to skip): '
+    );
+    slug ??= slugify(title);
 
     const today = new Date();
     const formattedDate = today.toISOString().split('T')[0];
-    const slugifiedTitle = slugify(title);
     const articleDir = path.join(
       __dirname,
       '..',
       'posts',
-      `${formattedDate}-${slugifiedTitle}`
+      `${formattedDate}-${slug}`
     );
     const articleFile = path.join(articleDir, 'index.md');
 
