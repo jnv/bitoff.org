@@ -2,5 +2,76 @@
 permalink: '/robots.txt'
 eleventyExcludeFromCollections: true
 ---
+# Based on <https://seirdy.one/meta/scrapers-i-block/>
+
+User-Agent: peer39_crawler/1.0
+Disallow: /
+
+## IP-violation scanners ##
+
+User-Agent: TurnitinBot
+Disallow: /
+
+User-Agent: AcademicBotRTU
+Disallow: /
+
+User-Agent: SlySearch
+Disallow: /
+
+User-Agent: BLEXBot
+Disallow: /
+
+User-agent: CheckMarkNetwork/1.0 (+https://www.checkmarknetwork.com/spider.html)
+Disallow: /
+
+User-agent: BrandVerity/1.0
+Disallow: /
+
+## Misc. icky stuff ##
+
+User-agent: PiplBot
+Disallow: /
+
+# Well-known overly-aggressive bot that claims to respect robots.txt: http://mj12bot.com/
+User-agent: MJ12bot
+Crawl-Delay: 10
+
+## Gen-AI data scrapers ##
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-Agent: FacebookBot
+User-Agent: meta-externalagent
+Disallow: /
+
+User-agent: Cotoyogi
+Disallow: /
+
+User-agent: Webzio-extended
+Disallow: /
+
+User-agent: Kangaroo Bot
+Disallow: /
+
+# Allow Open Web Search GenAI
+User-Agent: GenAI
+Disallow:
+
+User-Agent: SemrushBot-OCOB
+User-Agent: SemrushBot-FT
+Disallow: /
+
+User-Agent: VelenPublicWebCrawler
+Disallow: /
 
 Sitemap: {{ '/sitemap.xml' | htmlBaseUrl(metadata.base) }}
