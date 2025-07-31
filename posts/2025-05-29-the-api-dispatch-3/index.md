@@ -12,7 +12,7 @@ The API Dispatch is a series I started as an internal newsletter at work. It's a
 Originally published in April 2025.
 {% endcallout %}
 
-Let’s talk about API tooling, particularly around OpenAPI specification: design workflow, managing files, and SDK generators. Furthermore there’s some interesting discussion about designing query parameters, and – related to that – one cool new HTTP method you probably don’t know about (spoiler alert: it’s not standardized yet). And as a bonus, there’s a story of one API security exploit which might make you hungry.
+Let’s talk about API tooling, particularly around OpenAPI specification: design workflow, managing files, and SDK generators. Furthermore, there’s some interesting discussion about designing query parameters, and – related to that – one cool new HTTP method you probably don’t know about (spoiler alert: it’s not standardized yet). And as a bonus, there’s a story of one API security exploit which might make you hungry.
 
 ## The perfect modern OpenAPI workflow
 
