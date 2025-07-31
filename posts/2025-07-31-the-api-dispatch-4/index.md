@@ -2,6 +2,7 @@
 title: "The API Dispatch #4: Design-first doesn't have to be OpenAPI Spec first"
 description: The June installment of a monthly ‘newsletter’ about APIs. This issue focuses on The Language-Oriented Approach to API development, along with TypeSpec, Smithy, and ALPS.
 discussion:
+  Fediverse: https://mastodon.social/@jnv/114949897275674051
   LinkedIn: https://www.linkedin.com/pulse/api-dispatch-mewsletter-issue-4-mewsrnd-4vvqe/?trackingId=Uj7VHhPgTjG3Y5T51OwLzg%3D%3D
 ---
 
@@ -17,7 +18,7 @@ As we are breaking the monolith into increasing number of services, there’s a 
 
 Picking the technology decides how you design your APIs because each stack is tied to its own specification formats. But what if we could flip it around? Start with the domain design and turn the technology decision into an “implementation detail”…
 
-In this issue, we will explore "The Language-Oriented Approach" to API development, which goes beyond the OpenAPI specification. Instead of concentrating on the technical details of individual operations, this approach emphasizes high-level design and leaves the specifics to the tools. Furthermore, we will examine tools that support this method, such as TypeSpec, ALPS, and Smithy.
+In this issue, we will explore “The Language-Oriented Approach” to API development, which goes beyond the OpenAPI specification. Instead of concentrating on the technical details of individual operations, this approach emphasizes high-level design and leaves the specifics to the tools. Furthermore, we will examine tools that support this method, such as TypeSpec, ALPS, and Smithy.
 
 ## The Language-Oriented Approach to API Development
 
