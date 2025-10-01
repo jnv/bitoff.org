@@ -32,7 +32,7 @@
     "markdown-it-footnote": "^4.0.0"
   },
   "devDependencies": {
-    "@sindresorhus/slugify": "^2.2.1",
+    "@sindresorhus/slugify": "^3.0.0",
     "prettier": "3.6.2"
   }
 }
