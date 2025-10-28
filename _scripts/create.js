@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 
 function getTemplateContents(title) {
   return `---
-title: ${title}
+title: "${title}"
 description:
 ---
 `;
