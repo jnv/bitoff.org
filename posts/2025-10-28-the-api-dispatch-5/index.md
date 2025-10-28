@@ -2,7 +2,7 @@
 title: 'The API Dispatch #5: Beyond the endpoint, Upon the OpenAPI Spec, Above MCP'
 description: The July installment of a monthly ‘newsletter’ about APIs. This issue looks back on API meetup, OpenAPI Spec 3.2, and a few optimistic opinions about MCP.
 discussion:
-  LinkedIn: https://www.linkedin.com/pulse/api-dispatch-mewsletter-issue-3-mewsrnd-t5joe/
+  LinkedIn: https://www.linkedin.com/pulse/api-dispatch-mewsletter-issue-5-mewsrnd-debwe/
   # Fediverse:
 ---
 

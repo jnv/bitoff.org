@@ -3,7 +3,7 @@ title: "The API Dispatch #4: Design-first doesn't have to be OpenAPI Spec first"
 description: The June installment of a monthly ‘newsletter’ about APIs. This issue focuses on The Language-Oriented Approach to API development, along with TypeSpec, Smithy, and ALPS.
 discussion:
   Fediverse: https://mastodon.social/@jnv/114949897275674051
-  LinkedIn: https://www.linkedin.com/pulse/api-dispatch-mewsletter-issue-4-mewsrnd-4vvqe/?trackingId=Uj7VHhPgTjG3Y5T51OwLzg%3D%3D
+  LinkedIn: https://www.linkedin.com/pulse/api-dispatch-mewsletter-issue-4-mewsrnd-4vvqe/
 ---
 
 {% callout "Author's note" %}
