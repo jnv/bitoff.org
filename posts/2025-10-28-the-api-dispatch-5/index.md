@@ -50,7 +50,7 @@ You can also follow the [v3.2.0 milestone on GitHub](https://github.com/OAI/Open
 
 ## Will your toaster start taking phone calls thanks to MCP?
 
-You surely heard about Model Context Protocol (and if not, I’ve covered it in [The API Dispatch #2](/wiki/spaces/RND/blog/2025/03/31/634883453/The+API+Dispatch+2+MCP+is+coming+to+eat+our+APIs+or+maybe+not)) and how it allows for connecting of AI models to the outside world. But it doesn’t have to be just for AI right? That’s what Scott Werner argues: similar to how HTTP, Bluetooth, and USB expanded way beyond their original use cases, MCP has a potential to become a universal plugin ecosystem.
+You surely heard about Model Context Protocol (and if not, I’ve covered it in [The API Dispatch #2](../2025-05-27-the-api-dispatch-2/index.md)) and how it allows for connecting of AI models to the outside world. But it doesn’t have to be just for AI right? That’s what Scott Werner argues: similar to how HTTP, Bluetooth, and USB expanded way beyond their original use cases, MCP has a potential to become a universal plugin ecosystem.
 
 [MCP: An (Accidentally) Universal Plugin System](https://worksonmymachine.substack.com/p/mcp-an-accidentally-universal-plugin) (4 mins • Substack)
 
