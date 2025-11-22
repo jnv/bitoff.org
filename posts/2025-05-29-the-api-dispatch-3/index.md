@@ -74,6 +74,6 @@ _And now for something completely different._
 
 What happens when a hungry security researcher encounters an insecure food delivery application? Get ready for a drive-thru full of byte-sized exploits.
 
-[I’m Lovin’ It: Exploiting McDonald’s APIs to hijack deliveries and order food for a penny](https://eaton-works.com/2024/12/19/mcdelivery-india-hack/) (13 mins • Eaton Works)
+[I’m Lovin’ It: Exploiting McDonald’s APIs to hijack deliveries and order food for a penny](https://eaton-works.com/2024/12/19/mcdelivery-india-hack/) (13 mins • Eaton Works • h/t [Vojtěch Buben](https://www.linkedin.com/in/vojtechbuben/))
 
 > I was shocked at how easy that was. This type of vulnerability is called Broken Object Level Authorization or “BOLA”. This is a very common vulnerability I see all the time. Many BOLAs were found in McDelivery.
