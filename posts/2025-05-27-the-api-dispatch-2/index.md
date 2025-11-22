@@ -23,7 +23,7 @@ MCP defines a standardized way for Large Language Models to access context data 
 [Introduced by Anthropic in November 2024](https://www.anthropic.com/news/model-context-protocol) and supported in Claude for desktop, it gained more interest from developers in the past months, most recently with OpenAI [announcing planned support for MCP](https://nitter.net/OpenAIDevs/status/1904957755829481737).
 
 So what MCP means for APIs? Does it spell the end of APIs? Or their evolution? A cynic in me says “it’s just another overhyped middleware”. For less cynical view though, I can recommend the article from Kevin Swiber:
-[MCP: The Ultimate API Consumer (Not the API Killer)](https://www.layered.dev/mcp-the-ultimate-api-consumer-not-the-api-killer) (5 mins • layered.dev • h/t [Peter Vitez](https://mews.atlassian.net/wiki/people/712020:3d773bd0-7264-469e-8710-4085d8ec5af3?ref=confluence))
+[MCP: The Ultimate API Consumer (Not the API Killer)](https://www.layered.dev/mcp-the-ultimate-api-consumer-not-the-api-killer) (5 mins • layered.dev • h/t [Peter Vitez](https://www.linkedin.com/in/peter-vitez))
 
 > The relationship between MCP and APIs is symbiotic, not adversarial. MCP servers are essentially specialized API clients with a standardized interface—they're not replacing APIs, they're consuming them en masse.
 
