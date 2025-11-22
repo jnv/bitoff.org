@@ -21,13 +21,9 @@ At the end of the June our awesome R&D Community team organized API meetup in th
 [Mews Meetup: Beyond the Endpoint](https://www.youtube.com/playlist?list=PLPC0G0NFzXJrGYhF933XFjcmYdA4bvgRd) (5 videos • YouTube)
 
 - In [Code-First Meets Spec-First](https://www.youtube.com/watch?v=PkJXWzd0O2Y&list=PLPC0G0NFzXJrGYhF933XFjcmYdA4bvgRd&index=1) Martin Horák walked us through his journey of switching from code-first to spec-first API design at Mews, sharing mistakes he made and the tools that saved him.
-
 - In [AI Meets API: Practical AI Use Cases Across the API Lifecycle](https://www.youtube.com/watch?v=t1Jg9Y6-sg4&list=PLPC0G0NFzXJrGYhF933XFjcmYdA4bvgRd&index=2) Matyáš Křeček demonstrated how AI can assist at every stage of API development – from planning and diagram generation to mock servers, testing, and changelog creation. If you prefer reading, Matyáš also [prepared a write up of his talk](https://www.linkedin.com/pulse/ai-meets-api-practical-use-cases-across-lifecycle-maty%C3%A1%C5%A1-k%C5%99e%C4%8Dek-ifite/) (4 mins • LinkedIn).
-
 - In [GraphQL can make your life better. Or worse.](https://www.youtube.com/watch?v=Uo7Q08JpGLU&list=PLPC0G0NFzXJrGYhF933XFjcmYdA4bvgRd&index=3) Michal Řehout explored how poorly designed GraphQL schemas and schema stitiching can become a nightmare – and what to do instead.
-
 - In [AI Is Coming For Your API](https://www.youtube.com/watch?v=Esdgf5AfJBU&list=PLPC0G0NFzXJrGYhF933XFjcmYdA4bvgRd&index=5) Martyn Davies showed how AI agents consume and interact with APIs, urging teams to catalog endpoints, enforce authentication and rate-limiting via gateways, and adopt HTTP message signatures to guard against malicious or unintended agent traffic.
-
 - And finally, in [Best Practices My A\*\*](https://www.youtube.com/watch?v=bc_SIzR8Xvc&list=PLPC0G0NFzXJrGYhF933XFjcmYdA4bvgRd&index=4) Vojta Šťavík took a lighthearted look at beloved engineering “best-practice” mantras, poking fun at the ones that don’t add value and celebrating those that actually improve code and collaboration.
 
 ## AI Development Kit for Your IDE
