@@ -2,6 +2,8 @@
 title: "The API Dispatch #7: Not your model's model"
 description: >
   In the September API dispatch, we're celebrating the release of OpenAPI Specification 3.2. We'll also go over an important API design rule, check out the new RPC system for the web, and take a closer look at why HTTP/1 seems simple but isn’t. Read until the end for One Clever Trick for exfiltrating emails through MCP.
+discussion:
+  LinkedIn: https://www.linkedin.com/pulse/api-dispatch-mewsletter-issue-7-mewsrnd-1cgbe/
 ---
 
 {% callout "Author's note" %}
