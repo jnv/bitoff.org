@@ -10,7 +10,7 @@ export default (mdLib, eleventyConfig) => {
   });
   mdLib.use(footnote);
   mdLib.use(markdownItReplaceLink, {
-    processHTML: true,
+    processHTML: false, // breaks inline html: https://github.com/martinheidegger/markdown-it-replace-link/issues/8
     replaceLink: (link) => {
       if (!/^\.\.?\/.+\.md/.test(link)) {
         return link;
