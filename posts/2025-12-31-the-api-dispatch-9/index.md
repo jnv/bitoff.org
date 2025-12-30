@@ -4,6 +4,7 @@ description: >
   The end of the year is near, so I wanted to make a special edition of this newsletter – a holiday special. Surely you have a lot of stuff to read. But what about something to listen to?
 discussion:
   LinkedIn: https://www.linkedin.com/pulse/api-dispatch-mewsletter-issue-9-mewsrnd-zt4lc/
+  Fediverse: https://mastodon.social/@jnv/115811058363344351
 ---
 
 {% callout "Author's note" %}

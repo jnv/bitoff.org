@@ -4,6 +4,7 @@ description: >
   In the October issue of API Dispatch, we’ll take a look at Postman’s State of the API report, highlighting the gap between AI-powered development and AI-ready APIs. We then dive into HTTP caching and the sharp edges you can still bleed on – range, content negotiation, transfer-encoding – and a few under-tested API injection paths. Mike Amundsen returns to tap the sign with his maxim – and to remind you that MCP is (still) not your app.
 discussion:
   LinkedIn: https://www.linkedin.com/pulse/api-dispatch-mewsletter-issue-8-mewsrnd-5rkde/
+  Fediverse: https://mastodon.social/@jnv/115811040752891631
 ---
 
 {% callout "Author's note" %}
