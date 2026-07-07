@@ -1,5 +1,6 @@
 {
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
-  }
+  },
+  "harper.linters.UseTitleCase": false
 }
