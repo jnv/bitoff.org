@@ -1,5 +1,5 @@
 import { extname, join, dirname } from "path";
-import eleventyImage, { statsSync, generateHTML } from "@11ty/eleventy-img";
+import eleventyImage, { generateHTML } from "@11ty/eleventy-img";
 
 const WIDTHS = [720, null];
 
@@ -25,7 +25,7 @@ function getSizes(largestWidth) {
   return sizes.join(",");
 }
 
-export function imageShortcode(src, alt = "") {
+export async function imageShortcode(src, alt = "") {
   const srcExt = getExt(src);
   const options = {
     svgShortCircuit: true,
@@ -43,7 +43,7 @@ export function imageShortcode(src, alt = "") {
   eleventyImage(fileSrc, options);
 
   // get metadata even the images are not fully generated
-  const metadata = statsSync(fileSrc, options);
+  const metadata = await eleventyImage(fileSrc, {...options, statsOnly: true});
 
   const originalFile = metadata[srcExt].at(-1);
   const originalWidth = originalFile.width;

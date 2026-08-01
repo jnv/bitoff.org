@@ -1,7 +1,7 @@
 import { imageShortcode } from './image.js';
 
-function figure(content, src, alt) {
-  const img = imageShortcode.call(this, src, alt);
+async function figure(content, src, alt) {
+  const img = await imageShortcode.call(this, src, alt);
 
   const caption =
     content.trim() === '' ? '' : `<figcaption>\n${content}\n</figcaption>`;
