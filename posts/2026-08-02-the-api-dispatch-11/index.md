@@ -3,6 +3,7 @@ title: 'The API Dispatch #11: CLI is coming to eat our MCPs!'
 description: >
   After a February hiatus we will revisit MCP one year later. It looks like the pendulum is swinging back. Perplexity is moving to CLIs, critics are calling MCP dead, and Google is launching WebMCP on top of it all. Meanwhile, the emerging lesson is that “Agentic Experience” and User Experience aren’t either/or: what works for AI agents usually works for humans too. This issue also looks at token-efficient serialization formats gunning to become the JSON of the agentic era.
 discussion:
+  Fediverse: https://mastodon.social/@jnv/117026434263452562
   LinkedIn: https://www.linkedin.com/pulse/api-dispatch-11-cli-coming-eat-our-mcps-mewsrnd-fnvvf
 ---
 

@@ -3,6 +3,7 @@ title: 'The API Dispatch #10: The old is new again'
 description: >
   In the January issue, we admire the refreshed OpenAPI.tools, panic over the enshittification of API clients, take a tour of legacy API protocols, and pronounce GraphQL dead – again.
 discussion:
+  Fediverse: https://mastodon.social/@jnv/117020028727010535
   LinkedIn: https://www.linkedin.com/pulse/api-dispatch-10-old-new-again-mewsrnd-ovwwf
 ---
 
