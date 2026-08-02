@@ -28,7 +28,7 @@ The recent wave of anti-MCP sentiment was seemingly started by the [tweet by Mor
 
 And before that, Eric Holmes wrote why, in his opinion, is MCP dying.
 
-[https://ejholmes.github.io/2026/02/28/mcp-is-dead-long-live-the-cli.html](https://ejholmes.github.io/2026/02/28/mcp-is-dead-long-live-the-cli.html) (h/t [Nathaniel Goethel](https://www.linkedin.com/in/nathaniel-goethel))
+**[MCP is dead. Long live the CLI](https://ejholmes.github.io/2026/02/28/mcp-is-dead-long-live-the-cli.html)** (h/t [Nathaniel Goethel](https://www.linkedin.com/in/nathaniel-goethel))
 
 > The best tools are the ones that work for both humans and machines. CLIs have had decades of design iteration. They’re composable, debuggable, and they piggyback on auth systems that already exist.
 >
@@ -40,7 +40,7 @@ Last year everyone was building MCP servers. Now seemingly everyone is building 
 
 Meanwhile, Google [launched an early preview of WebMCP](https://developer.chrome.com/blog/webmcp-epp) in February. What is WebMCP? Think of adding an MCP layer on any website which provides browser AI agents (like Gemini in Chrome) with custom tools. David Eastman has a more detailed introduction in The New Stack:
 
-[https://thenewstack.io/webmcp-chrome-ai-agents/](https://thenewstack.io/webmcp-chrome-ai-agents/) (h/t [Eduard Ethan Carres Hidalgo](https://www.linkedin.com/in/eduardethancarres/))
+**[WebMCP turns any Chrome web page into an MCP server for AI agents](https://thenewstack.io/webmcp-chrome-ai-agents/)** (h/t [Eduard Ethan Carres Hidalgo](https://www.linkedin.com/in/eduardethancarres/))
 
 > Because you may be browsing a site and want to ask an agent a question about the page, the agent needs some knowledge of the context before and during your question. You can imagine a user bringing up an AI chat next to a page and asking about something on the screen. So don’t just imagine an agent hitting a headless browser for some task, but also a user interrupting their own browsing session to query the site.
 
@@ -50,7 +50,7 @@ And for sure, we will see abuses and prompt injections with rogue WebMCP integra
 
 ## If it’s good for AI, maybe it’s also good for humans
 
-There is an underlying narrative weaving behind these topics. Maybe you heard about newfangled terms like “Agentic Experience” which some pundits claim to be more important than User Experience (“Reply ‘AX’ to receive my FREE PDF on how to make your product agent-friendly!”). Maybe you spent hours tweaking `CLAUDE.md` and didn’t even bother with `README.md` (I know I did). But if there’s a lesson to be found in recent MCP vs. CLI discourse, it’s that what works for AI agents usually works for humans too. Or as Vladimir Keleshev puts it, [AI=true is an Anti-Pattern](https://keleshev.com/ai-equals-true-is-an-anti-pattern):
+There is an underlying narrative weaving behind these topics. Maybe you heard about newfangled terms like “Agentic Experience” which some pundits claim to be more important than User Experience (“Reply ‘AX’ to receive my FREE PDF on how to make your product agent-friendly!”). Maybe you spent hours tweaking `CLAUDE.md` and didn’t even bother with `README.md` (I know I did). But if there’s a lesson to be found in recent MCP vs. CLI discourse, it’s that what works for AI agents usually works for humans too. Or as Vladimir Keleshev puts it, **[AI=true is an Anti-Pattern](https://keleshev.com/ai-equals-true-is-an-anti-pattern)**:
 
 > I’ve seen an MCP tool being introduced because the actual command-line tool took a lot of time to execute, was producing no output and was—bacause of that—often mistakingly terminated early by the agent. That reminds me of someone else who is also prone to that… I am! Well, who else, when running a new tool and presented with a hanging command-line, doesn’t just Ctrl-C out of it, if nothing happens for straight 10 seconds?
 
@@ -60,7 +60,7 @@ In other words, “Agentic Experience” and “User Experience” isn’t eithe
 
 Okay, perhaps there’s one area where we could make the experience, or rather budget, more agent friendly: token efficiency. With AI spending burning holes into budgets, industry is becoming token-anxious. Most APIs serialize data into JSON which incurs a lot of token overhead. In turn, new token-efficient formats are trying to become “JSON of the agentic era”. Vineet Bhatkoti takes a closer look at [TOON](https://toonformat.dev/) (Token-Oriented Object Notation) and [TRON](https://tron-format.github.io/) (Token Reduced Object Notation). Both with the same goal, but vastly different approaches.
 
-[https://dzone.com/articles/token-efficient-apis-for-the-agentic-era](https://dzone.com/articles/token-efficient-apis-for-the-agentic-era)
+**[Token-Efficient APIs for the Agentic Era](https://dzone.com/articles/token-efficient-apis-for-the-agentic-era)**
 
 > TOON has proven effective for replacing JSON in internal agent-to-service calls, particularly for tabular data. The implementation is straightforward, the accuracy impact is minimal, and the cost savings are immediate.
 >
