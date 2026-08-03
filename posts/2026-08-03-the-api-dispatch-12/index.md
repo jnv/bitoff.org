@@ -3,6 +3,7 @@ title: 'The API Dispatch #12: Haters gonna HATEOAS'
 description: >
   This month we will look into why that funny acronym HATEOAS (Hypermedia as the engine of application state) is making headlines as the fix for broken web APIs. We will take a dive from the history of hypermedia to agent affordances and a cure for bloated MCP servers. And also unwrap Arazzo 1.1, and learn how to do idempotency the right way.
 discussion:
+  Fediverse: https://mastodon.social/@jnv/117030752939393421
   LinkedIn: https://www.linkedin.com/pulse/api-dispatch-12-haters-gonna-hateoas-mewsrnd-dpsyf
 ---
 
