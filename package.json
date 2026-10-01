@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@sindresorhus/slugify": "^3.0.0",
-    "prettier": "3.9.6"
+    "prettier": "3.9.9"
   },
   "allowScripts": {
     "fsevents@2.3.2": true,
