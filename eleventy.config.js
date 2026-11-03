@@ -7,6 +7,8 @@ import pluginFilters from './src/filters.js';
 import pluginShortcodes from './src/shortcodes.js';
 import amendMarkdown from './src/markdown.js';
 import pluginDrafts from './src/drafts.js';
+import pluginFeeds from './src/feeds.js';
+import metadata from './_data/metadata.json' with { type: 'json' };
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ './public/': '/' });
@@ -15,6 +17,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(pluginFeeds, metadata);
 
   eleventyConfig.addPlugin(pluginDrafts);
   eleventyConfig.addPlugin(pluginFilters);
