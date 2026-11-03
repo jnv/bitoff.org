@@ -1,22 +1,28 @@
 import assert from 'node:assert/strict';
-import { mkdtemp, readFile, rm } from 'node:fs/promises';
+import { copyFile, mkdir, mkdtemp, readFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
 import Eleventy from '@11ty/eleventy';
 import pluginRss from '@11ty/eleventy-plugin-rss';
-import pluginFeeds from './feeds.js';
 import metadata from '../_data/metadata.json' with { type: 'json' };
 
-test('generated feeds preserve identity, metadata, content, and collection membership', async () => {
+test('feed templates preserve identity, metadata, content, and collection membership', async () => {
   const input = await mkdtemp(path.join(tmpdir(), 'bitoff-feeds-'));
   try {
     const output = path.join(input, '_site');
+    await mkdir(path.join(input, 'feed'));
+    for (const name of ['feed.njk', 'json.njk']) {
+      await copyFile(
+        new URL(`../feed/${name}`, import.meta.url),
+        path.join(input, 'feed', name)
+      );
+    }
     const site = new Eleventy(input, output, {
       configPath: false,
       config(config) {
         config.addPlugin(pluginRss);
-        config.addPlugin(pluginFeeds, metadata);
+        config.addGlobalData('metadata', metadata);
         // Deliberately unsorted, with a newer URL-less entry that must be skipped.
         for (const [slug, date, permalink] of [
           ['new', '2026-02-01', '/new/'],
