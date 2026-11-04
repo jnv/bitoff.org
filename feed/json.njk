@@ -18,7 +18,7 @@ eleventyExcludeFromCollections: true
     }
   ],
   "items": [
-    {%- for post in collections.posts | reverse %}
+    {%- for post in collections.posts | eleventyFeedHasUrl | eleventyFeedSortByDate("descending") %}
     {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl(metadata.base) }}{% endset %}
     {
       "id": "{{- metadata.feed.id }}:posts:{{ post.fileSlug -}}",
